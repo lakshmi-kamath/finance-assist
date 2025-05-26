@@ -1,0 +1,1798 @@
+[
+  {
+    "id": 0,
+    "text": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Market Data \n                Current Price: $191.98\n                Previous Close: $196.19\n                Market Cap: $995,708,108,800\n                P/E Ratio: 23.102285\n                Volume: 9,394,700\n                Sector: Technology\n                 Stock symbol: TSM Taiwan Semiconductor Manufacturing Company TSMC Company: Taiwan Semiconductor Manufacturing Company Limited Asian technology company Asia tech semiconductor stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:24:25.416038",
+    "symbol": "TSM",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "tsm"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "TSM",
+      "company_name": "Taiwan Semiconductor Manufacturing Company Limited",
+      "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Market Data",
+      "content": "\n                Current Price: $191.98\n                Previous Close: $196.19\n                Market Cap: $995,708,108,800\n                P/E Ratio: 23.102285\n                Volume: 9,394,700\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:24:25.416038",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "tsm"
+      ],
+      "metadata": {
+        "symbol": "TSM",
+        "company_name": "Taiwan Semiconductor Manufacturing Company Limited",
+        "sector": "Technology",
+        "current_price": 191.97999572753906,
+        "previous_close": 196.19000244140625,
+        "market_cap": 995708108800,
+        "pe_ratio": 23.102285,
+        "volume": 9394700,
+        "avg_volume": 17365962,
+        "timestamp": "2025-05-27T01:24:25.416038",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 1,
+    "text": "Samsung Electronics Co., Ltd. (005930.KS) Market Data \n                Current Price: $54700.00\n                Previous Close: $54200.00\n                Market Cap: $357,481,435,889,664\n                P/E Ratio: 0\n                Volume: 10,901,337\n                Sector: Technology\n                 Stock symbol: 005930.KS Samsung Electronics Samsung Company: Samsung Electronics Co., Ltd. Asian technology company Asia tech semiconductor stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:24:26.025651",
+    "symbol": "005930.KS",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "005930.ks"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "005930.KS",
+      "company_name": "Samsung Electronics Co., Ltd.",
+      "title": "Samsung Electronics Co., Ltd. (005930.KS) Market Data",
+      "content": "\n                Current Price: $54700.00\n                Previous Close: $54200.00\n                Market Cap: $357,481,435,889,664\n                P/E Ratio: 0\n                Volume: 10,901,337\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:24:26.025651",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "005930.ks"
+      ],
+      "metadata": {
+        "symbol": "005930.KS",
+        "company_name": "Samsung Electronics Co., Ltd.",
+        "sector": "Technology",
+        "current_price": 54700.0,
+        "previous_close": 54200.0,
+        "market_cap": 357481435889664,
+        "pe_ratio": 0,
+        "volume": 10901337,
+        "avg_volume": 16639708,
+        "timestamp": "2025-05-27T01:24:26.025651",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "text": "Alibaba Group Holding Limited (BABA) Market Data \n                Current Price: $120.73\n                Previous Close: $121.48\n                Market Cap: $289,633,697,792\n                P/E Ratio: 16.22715\n                Volume: 7,156,900\n                Sector: Consumer Cyclical\n                 Stock symbol: BABA Alibaba Group Alibaba Company: Alibaba Group Holding Limited Asian technology company Asia tech semiconductor stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:24:26.575403",
+    "symbol": "BABA",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "baba"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "BABA",
+      "company_name": "Alibaba Group Holding Limited",
+      "title": "Alibaba Group Holding Limited (BABA) Market Data",
+      "content": "\n                Current Price: $120.73\n                Previous Close: $121.48\n                Market Cap: $289,633,697,792\n                P/E Ratio: 16.22715\n                Volume: 7,156,900\n                Sector: Consumer Cyclical\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:24:26.575403",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "baba"
+      ],
+      "metadata": {
+        "symbol": "BABA",
+        "company_name": "Alibaba Group Holding Limited",
+        "sector": "Consumer Cyclical",
+        "current_price": 120.7300033569336,
+        "previous_close": 121.4800033569336,
+        "market_cap": 289633697792,
+        "pe_ratio": 16.22715,
+        "volume": 7156900,
+        "avg_volume": 22649790,
+        "timestamp": "2025-05-27T01:24:26.575403",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "text": "Tencent Holdings Limited (TCEHY) Market Data \n                Current Price: $65.76\n                Previous Close: $65.37\n                Market Cap: $602,333,380,608\n                P/E Ratio: 23.15493\n                Volume: 1,432,200\n                Sector: Communication Services\n                 Stock symbol: TCEHY Tencent Holdings Tencent Company: Tencent Holdings Limited stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:24:27.131388",
+    "symbol": "TCEHY",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "tcehy"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "TCEHY",
+      "company_name": "Tencent Holdings Limited",
+      "title": "Tencent Holdings Limited (TCEHY) Market Data",
+      "content": "\n                Current Price: $65.76\n                Previous Close: $65.37\n                Market Cap: $602,333,380,608\n                P/E Ratio: 23.15493\n                Volume: 1,432,200\n                Sector: Communication Services\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:24:27.131388",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "tcehy"
+      ],
+      "metadata": {
+        "symbol": "TCEHY",
+        "company_name": "Tencent Holdings Limited",
+        "sector": "Communication Services",
+        "current_price": 65.76000213623047,
+        "previous_close": 65.37000274658203,
+        "market_cap": 602333380608,
+        "pe_ratio": 23.15493,
+        "volume": 1432200,
+        "avg_volume": 4292209,
+        "timestamp": "2025-05-27T01:24:27.131388",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "text": "Sony Group Corporation (6758.T) Market Data \n                Current Price: $3740.00\n                Previous Close: $3683.00\n                Market Cap: $22,511,808,937,984\n                P/E Ratio: 19.911621\n                Volume: 7,470,400\n                Sector: Technology\n                 Stock symbol: 6758.T Sony Corporation Sony Company: Sony Group Corporation stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:24:27.700306",
+    "symbol": "6758.T",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "6758.t"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "6758.T",
+      "company_name": "Sony Group Corporation",
+      "title": "Sony Group Corporation (6758.T) Market Data",
+      "content": "\n                Current Price: $3740.00\n                Previous Close: $3683.00\n                Market Cap: $22,511,808,937,984\n                P/E Ratio: 19.911621\n                Volume: 7,470,400\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:24:27.700306",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "6758.t"
+      ],
+      "metadata": {
+        "symbol": "6758.T",
+        "company_name": "Sony Group Corporation",
+        "sector": "Technology",
+        "current_price": 3740.0,
+        "previous_close": 3683.0,
+        "market_cap": 22511808937984,
+        "pe_ratio": 19.911621,
+        "volume": 7470400,
+        "avg_volume": 17568094,
+        "timestamp": "2025-05-27T01:24:27.700306",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "text": "ASML Holding N.V. (ASML) Market Data \n                Current Price: $732.49\n                Previous Close: $740.70\n                Market Cap: $292,605,591,552\n                P/E Ratio: 29.241117\n                Volume: 1,524,200\n                Sector: Technology\n                 Stock symbol: ASML ASML Holding ASML Company: ASML Holding N.V. stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:24:28.311319",
+    "symbol": "ASML",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "asml"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "ASML",
+      "company_name": "ASML Holding N.V.",
+      "title": "ASML Holding N.V. (ASML) Market Data",
+      "content": "\n                Current Price: $732.49\n                Previous Close: $740.70\n                Market Cap: $292,605,591,552\n                P/E Ratio: 29.241117\n                Volume: 1,524,200\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:24:28.311319",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "asml"
+      ],
+      "metadata": {
+        "symbol": "ASML",
+        "company_name": "ASML Holding N.V.",
+        "sector": "Technology",
+        "current_price": 732.489990234375,
+        "previous_close": 740.7000122070312,
+        "market_cap": 292605591552,
+        "pe_ratio": 29.241117,
+        "volume": 1524200,
+        "avg_volume": 1668957,
+        "timestamp": "2025-05-27T01:24:28.311319",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "text": "SoftBank Group Corp. (9984.T) Market Data \n                Current Price: $7631.00\n                Previous Close: $7464.00\n                Market Cap: $10,912,406,700,032\n                P/E Ratio: 9.792875\n                Volume: 4,773,900\n                Sector: Communication Services\n                 Stock symbol: 9984.T SoftBank Group SoftBank Company: SoftBank Group Corp. stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:24:28.900869",
+    "symbol": "9984.T",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "9984.t"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "9984.T",
+      "company_name": "SoftBank Group Corp.",
+      "title": "SoftBank Group Corp. (9984.T) Market Data",
+      "content": "\n                Current Price: $7631.00\n                Previous Close: $7464.00\n                Market Cap: $10,912,406,700,032\n                P/E Ratio: 9.792875\n                Volume: 4,773,900\n                Sector: Communication Services\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:24:28.900869",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "9984.t"
+      ],
+      "metadata": {
+        "symbol": "9984.T",
+        "company_name": "SoftBank Group Corp.",
+        "sector": "Communication Services",
+        "current_price": 7631.0,
+        "previous_close": 7464.0,
+        "market_cap": 10912406700032,
+        "pe_ratio": 9.792875,
+        "volume": 4773900,
+        "avg_volume": 8043405,
+        "timestamp": "2025-05-27T01:24:28.900869",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "text": "TSM Earnings - 2025-03-31 \n                Fiscal Date: 2025-03-31\n                Reported EPS: $2.12\n                Estimated EPS: $2.065\n                Surprise: $0.055 (2.6634%)\n                 Stock symbol: TSM Taiwan Semiconductor Manufacturing Company TSMC Asian technology company Asia tech semiconductor quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:34.218309",
+    "symbol": "TSM",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "tsm"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "TSM",
+      "title": "TSM Earnings - 2025-03-31",
+      "content": "\n                Fiscal Date: 2025-03-31\n                Reported EPS: $2.12\n                Estimated EPS: $2.065\n                Surprise: $0.055 (2.6634%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:34.218309",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "tsm"
+      ],
+      "metadata": {
+        "symbol": "TSM",
+        "fiscal_date_ending": "2025-03-31",
+        "reported_eps": 2.12,
+        "estimated_eps": 2.065,
+        "surprise": 0.055,
+        "surprise_percentage": 2.6634,
+        "timestamp": "2025-05-27T01:24:34.218309",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "text": "TSM Earnings - 2024-12-31 \n                Fiscal Date: 2024-12-31\n                Reported EPS: $2.24\n                Estimated EPS: $2.17\n                Surprise: $0.07 (3.2258%)\n                 Stock symbol: TSM Taiwan Semiconductor Manufacturing Company TSMC Asian technology company Asia tech semiconductor quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:34.218372",
+    "symbol": "TSM",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "tsm"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "TSM",
+      "title": "TSM Earnings - 2024-12-31",
+      "content": "\n                Fiscal Date: 2024-12-31\n                Reported EPS: $2.24\n                Estimated EPS: $2.17\n                Surprise: $0.07 (3.2258%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:34.218372",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "tsm"
+      ],
+      "metadata": {
+        "symbol": "TSM",
+        "fiscal_date_ending": "2024-12-31",
+        "reported_eps": 2.24,
+        "estimated_eps": 2.17,
+        "surprise": 0.07,
+        "surprise_percentage": 3.2258,
+        "timestamp": "2025-05-27T01:24:34.218372",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "text": "TSM Earnings - 2024-09-30 \n                Fiscal Date: 2024-09-30\n                Reported EPS: $1.94\n                Estimated EPS: $1.8\n                Surprise: $0.14 (7.7778%)\n                 Stock symbol: TSM Taiwan Semiconductor Manufacturing Company TSMC Asian technology company Asia tech semiconductor quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:34.218384",
+    "symbol": "TSM",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "tsm"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "TSM",
+      "title": "TSM Earnings - 2024-09-30",
+      "content": "\n                Fiscal Date: 2024-09-30\n                Reported EPS: $1.94\n                Estimated EPS: $1.8\n                Surprise: $0.14 (7.7778%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:34.218384",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "tsm"
+      ],
+      "metadata": {
+        "symbol": "TSM",
+        "fiscal_date_ending": "2024-09-30",
+        "reported_eps": 1.94,
+        "estimated_eps": 1.8,
+        "surprise": 0.14,
+        "surprise_percentage": 7.7778,
+        "timestamp": "2025-05-27T01:24:34.218384",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "text": "TSM Earnings - 2024-06-30 \n                Fiscal Date: 2024-06-30\n                Reported EPS: $1.48\n                Estimated EPS: $1.43\n                Surprise: $0.05 (3.4965%)\n                 Stock symbol: TSM Taiwan Semiconductor Manufacturing Company TSMC Asian technology company Asia tech semiconductor quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:34.218394",
+    "symbol": "TSM",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "tsm"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "TSM",
+      "title": "TSM Earnings - 2024-06-30",
+      "content": "\n                Fiscal Date: 2024-06-30\n                Reported EPS: $1.48\n                Estimated EPS: $1.43\n                Surprise: $0.05 (3.4965%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:34.218394",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "tsm"
+      ],
+      "metadata": {
+        "symbol": "TSM",
+        "fiscal_date_ending": "2024-06-30",
+        "reported_eps": 1.48,
+        "estimated_eps": 1.43,
+        "surprise": 0.05,
+        "surprise_percentage": 3.4965,
+        "timestamp": "2025-05-27T01:24:34.218394",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "text": "BABA Earnings - 2025-03-31 \n                Fiscal Date: 2025-03-31\n                Reported EPS: $12.52\n                Estimated EPS: $12.8145\n                Surprise: $-0.2945 (-2.2982%)\n                 Stock symbol: BABA Alibaba Group Alibaba Asian technology company Asia tech semiconductor quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:36.217446",
+    "symbol": "BABA",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "baba"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "BABA",
+      "title": "BABA Earnings - 2025-03-31",
+      "content": "\n                Fiscal Date: 2025-03-31\n                Reported EPS: $12.52\n                Estimated EPS: $12.8145\n                Surprise: $-0.2945 (-2.2982%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:36.217446",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "baba"
+      ],
+      "metadata": {
+        "symbol": "BABA",
+        "fiscal_date_ending": "2025-03-31",
+        "reported_eps": 12.52,
+        "estimated_eps": 12.8145,
+        "surprise": -0.2945,
+        "surprise_percentage": -2.2982,
+        "timestamp": "2025-05-27T01:24:36.217446",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "text": "BABA Earnings - 2024-12-31 \n                Fiscal Date: 2024-12-31\n                Reported EPS: $21.39\n                Estimated EPS: $19.3757\n                Surprise: $2.0143 (10.396%)\n                 Stock symbol: BABA Alibaba Group Alibaba Asian technology company Asia tech semiconductor quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:36.217494",
+    "symbol": "BABA",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "baba"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "BABA",
+      "title": "BABA Earnings - 2024-12-31",
+      "content": "\n                Fiscal Date: 2024-12-31\n                Reported EPS: $21.39\n                Estimated EPS: $19.3757\n                Surprise: $2.0143 (10.396%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:36.217494",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "baba"
+      ],
+      "metadata": {
+        "symbol": "BABA",
+        "fiscal_date_ending": "2024-12-31",
+        "reported_eps": 21.39,
+        "estimated_eps": 19.3757,
+        "surprise": 2.0143,
+        "surprise_percentage": 10.396,
+        "timestamp": "2025-05-27T01:24:36.217494",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 13,
+    "text": "BABA Earnings - 2024-09-30 \n                Fiscal Date: 2024-09-30\n                Reported EPS: $15.06\n                Estimated EPS: $14.7724\n                Surprise: $0.2876 (1.9469%)\n                 Stock symbol: BABA Alibaba Group Alibaba Asian technology company Asia tech semiconductor quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:36.217504",
+    "symbol": "BABA",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "baba"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "BABA",
+      "title": "BABA Earnings - 2024-09-30",
+      "content": "\n                Fiscal Date: 2024-09-30\n                Reported EPS: $15.06\n                Estimated EPS: $14.7724\n                Surprise: $0.2876 (1.9469%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:36.217504",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "baba"
+      ],
+      "metadata": {
+        "symbol": "BABA",
+        "fiscal_date_ending": "2024-09-30",
+        "reported_eps": 15.06,
+        "estimated_eps": 14.7724,
+        "surprise": 0.2876,
+        "surprise_percentage": 1.9469,
+        "timestamp": "2025-05-27T01:24:36.217504",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 14,
+    "text": "BABA Earnings - 2024-06-30 \n                Fiscal Date: 2024-06-30\n                Reported EPS: $16.44\n                Estimated EPS: $15.23\n                Surprise: $1.21 (7.9448%)\n                 Stock symbol: BABA Alibaba Group Alibaba Asian technology company Asia tech semiconductor quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:36.217514",
+    "symbol": "BABA",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "baba"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "BABA",
+      "title": "BABA Earnings - 2024-06-30",
+      "content": "\n                Fiscal Date: 2024-06-30\n                Reported EPS: $16.44\n                Estimated EPS: $15.23\n                Surprise: $1.21 (7.9448%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:36.217514",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "baba"
+      ],
+      "metadata": {
+        "symbol": "BABA",
+        "fiscal_date_ending": "2024-06-30",
+        "reported_eps": 16.44,
+        "estimated_eps": 15.23,
+        "surprise": 1.21,
+        "surprise_percentage": 7.9448,
+        "timestamp": "2025-05-27T01:24:36.217514",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 15,
+    "text": "ASML Earnings - 2025-03-31 \n                Fiscal Date: 2025-03-31\n                Reported EPS: $6.0\n                Estimated EPS: $5.7865\n                Surprise: $0.2135 (3.6896%)\n                 Stock symbol: ASML ASML Holding ASML quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:39.290917",
+    "symbol": "ASML",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "asml"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "ASML",
+      "title": "ASML Earnings - 2025-03-31",
+      "content": "\n                Fiscal Date: 2025-03-31\n                Reported EPS: $6.0\n                Estimated EPS: $5.7865\n                Surprise: $0.2135 (3.6896%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:39.290917",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "asml"
+      ],
+      "metadata": {
+        "symbol": "ASML",
+        "fiscal_date_ending": "2025-03-31",
+        "reported_eps": 6.0,
+        "estimated_eps": 5.7865,
+        "surprise": 0.2135,
+        "surprise_percentage": 3.6896,
+        "timestamp": "2025-05-27T01:24:39.290917",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 16,
+    "text": "ASML Earnings - 2024-12-31 \n                Fiscal Date: 2024-12-31\n                Reported EPS: $6.84\n                Estimated EPS: $6.7343\n                Surprise: $0.1057 (1.5696%)\n                 Stock symbol: ASML ASML Holding ASML quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:39.290969",
+    "symbol": "ASML",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "asml"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "ASML",
+      "title": "ASML Earnings - 2024-12-31",
+      "content": "\n                Fiscal Date: 2024-12-31\n                Reported EPS: $6.84\n                Estimated EPS: $6.7343\n                Surprise: $0.1057 (1.5696%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:39.290969",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "asml"
+      ],
+      "metadata": {
+        "symbol": "ASML",
+        "fiscal_date_ending": "2024-12-31",
+        "reported_eps": 6.84,
+        "estimated_eps": 6.7343,
+        "surprise": 0.1057,
+        "surprise_percentage": 1.5696,
+        "timestamp": "2025-05-27T01:24:39.290969",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 17,
+    "text": "ASML Earnings - 2024-09-30 \n                Fiscal Date: 2024-09-30\n                Reported EPS: $5.28\n                Estimated EPS: $4.87\n                Surprise: $0.41 (8.4189%)\n                 Stock symbol: ASML ASML Holding ASML quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:39.290981",
+    "symbol": "ASML",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "asml"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "ASML",
+      "title": "ASML Earnings - 2024-09-30",
+      "content": "\n                Fiscal Date: 2024-09-30\n                Reported EPS: $5.28\n                Estimated EPS: $4.87\n                Surprise: $0.41 (8.4189%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:39.290981",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "asml"
+      ],
+      "metadata": {
+        "symbol": "ASML",
+        "fiscal_date_ending": "2024-09-30",
+        "reported_eps": 5.28,
+        "estimated_eps": 4.87,
+        "surprise": 0.41,
+        "surprise_percentage": 8.4189,
+        "timestamp": "2025-05-27T01:24:39.290981",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 18,
+    "text": "ASML Earnings - 2024-06-30 \n                Fiscal Date: 2024-06-30\n                Reported EPS: $4.01\n                Estimated EPS: $3.73\n                Surprise: $0.28 (7.5067%)\n                 Stock symbol: ASML ASML Holding ASML quarterly results financial performance earnings report quarterly results financial performance",
+    "source": "alphavantage_earnings",
+    "content_type": "earnings_data",
+    "timestamp": "2025-05-27T01:24:39.290992",
+    "symbol": "ASML",
+    "tags": [
+      "earnings",
+      "asia_tech",
+      "asml"
+    ],
+    "metadata": {
+      "content_type": "earnings_data",
+      "symbol": "ASML",
+      "title": "ASML Earnings - 2024-06-30",
+      "content": "\n                Fiscal Date: 2024-06-30\n                Reported EPS: $4.01\n                Estimated EPS: $3.73\n                Surprise: $0.28 (7.5067%)\n                ",
+      "source": "alphavantage_earnings",
+      "timestamp": "2025-05-27T01:24:39.290992",
+      "tags": [
+        "earnings",
+        "asia_tech",
+        "asml"
+      ],
+      "metadata": {
+        "symbol": "ASML",
+        "fiscal_date_ending": "2024-06-30",
+        "reported_eps": 4.01,
+        "estimated_eps": 3.73,
+        "surprise": 0.28,
+        "surprise_percentage": 7.5067,
+        "timestamp": "2025-05-27T01:24:39.290992",
+        "source": "alphavantage_earnings"
+      }
+    }
+  },
+  {
+    "id": 19,
+    "text": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Market Data \n                Current Price: $191.98\n                Previous Close: $196.19\n                Market Cap: $995,708,108,800\n                P/E Ratio: 23.102285\n                Volume: 9,394,700\n                Sector: Technology\n                 Stock symbol: TSM Taiwan Semiconductor Manufacturing Company TSMC Company: Taiwan Semiconductor Manufacturing Company Limited Asian technology company Asia tech semiconductor stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:44:54.741747",
+    "symbol": "TSM",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "tsm"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "TSM",
+      "company_name": "Taiwan Semiconductor Manufacturing Company Limited",
+      "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Market Data",
+      "content": "\n                Current Price: $191.98\n                Previous Close: $196.19\n                Market Cap: $995,708,108,800\n                P/E Ratio: 23.102285\n                Volume: 9,394,700\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:44:54.741747",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "tsm"
+      ],
+      "metadata": {
+        "symbol": "TSM",
+        "company_name": "Taiwan Semiconductor Manufacturing Company Limited",
+        "sector": "Technology",
+        "current_price": 191.97999572753906,
+        "previous_close": 196.19000244140625,
+        "market_cap": 995708108800,
+        "pe_ratio": 23.102285,
+        "volume": 9394700,
+        "avg_volume": 17365962,
+        "timestamp": "2025-05-27T01:44:54.741747",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 20,
+    "text": "Samsung Electronics Co., Ltd. (005930.KS) Market Data \n                Current Price: $54700.00\n                Previous Close: $54200.00\n                Market Cap: $357,481,435,889,664\n                P/E Ratio: 0\n                Volume: 10,901,337\n                Sector: Technology\n                 Stock symbol: 005930.KS Samsung Electronics Samsung Company: Samsung Electronics Co., Ltd. Asian technology company Asia tech semiconductor stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:44:55.342209",
+    "symbol": "005930.KS",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "005930.ks"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "005930.KS",
+      "company_name": "Samsung Electronics Co., Ltd.",
+      "title": "Samsung Electronics Co., Ltd. (005930.KS) Market Data",
+      "content": "\n                Current Price: $54700.00\n                Previous Close: $54200.00\n                Market Cap: $357,481,435,889,664\n                P/E Ratio: 0\n                Volume: 10,901,337\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:44:55.342209",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "005930.ks"
+      ],
+      "metadata": {
+        "symbol": "005930.KS",
+        "company_name": "Samsung Electronics Co., Ltd.",
+        "sector": "Technology",
+        "current_price": 54700.0,
+        "previous_close": 54200.0,
+        "market_cap": 357481435889664,
+        "pe_ratio": 0,
+        "volume": 10901337,
+        "avg_volume": 16639708,
+        "timestamp": "2025-05-27T01:44:55.342209",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 21,
+    "text": "Alibaba Group Holding Limited (BABA) Market Data \n                Current Price: $120.73\n                Previous Close: $121.48\n                Market Cap: $289,633,697,792\n                P/E Ratio: 16.22715\n                Volume: 7,156,900\n                Sector: Consumer Cyclical\n                 Stock symbol: BABA Alibaba Group Alibaba Company: Alibaba Group Holding Limited Asian technology company Asia tech semiconductor stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:44:55.966608",
+    "symbol": "BABA",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "baba"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "BABA",
+      "company_name": "Alibaba Group Holding Limited",
+      "title": "Alibaba Group Holding Limited (BABA) Market Data",
+      "content": "\n                Current Price: $120.73\n                Previous Close: $121.48\n                Market Cap: $289,633,697,792\n                P/E Ratio: 16.22715\n                Volume: 7,156,900\n                Sector: Consumer Cyclical\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:44:55.966608",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "baba"
+      ],
+      "metadata": {
+        "symbol": "BABA",
+        "company_name": "Alibaba Group Holding Limited",
+        "sector": "Consumer Cyclical",
+        "current_price": 120.7300033569336,
+        "previous_close": 121.4800033569336,
+        "market_cap": 289633697792,
+        "pe_ratio": 16.22715,
+        "volume": 7156900,
+        "avg_volume": 22649790,
+        "timestamp": "2025-05-27T01:44:55.966608",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 22,
+    "text": "Tencent Holdings Limited (TCEHY) Market Data \n                Current Price: $65.76\n                Previous Close: $65.37\n                Market Cap: $602,333,380,608\n                P/E Ratio: 23.15493\n                Volume: 1,432,200\n                Sector: Communication Services\n                 Stock symbol: TCEHY Tencent Holdings Tencent Company: Tencent Holdings Limited stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:44:56.879327",
+    "symbol": "TCEHY",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "tcehy"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "TCEHY",
+      "company_name": "Tencent Holdings Limited",
+      "title": "Tencent Holdings Limited (TCEHY) Market Data",
+      "content": "\n                Current Price: $65.76\n                Previous Close: $65.37\n                Market Cap: $602,333,380,608\n                P/E Ratio: 23.15493\n                Volume: 1,432,200\n                Sector: Communication Services\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:44:56.879327",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "tcehy"
+      ],
+      "metadata": {
+        "symbol": "TCEHY",
+        "company_name": "Tencent Holdings Limited",
+        "sector": "Communication Services",
+        "current_price": 65.76000213623047,
+        "previous_close": 65.37000274658203,
+        "market_cap": 602333380608,
+        "pe_ratio": 23.15493,
+        "volume": 1432200,
+        "avg_volume": 4292209,
+        "timestamp": "2025-05-27T01:44:56.879327",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 23,
+    "text": "Sony Group Corporation (6758.T) Market Data \n                Current Price: $3740.00\n                Previous Close: $3683.00\n                Market Cap: $22,511,808,937,984\n                P/E Ratio: 19.911621\n                Volume: 7,470,400\n                Sector: Technology\n                 Stock symbol: 6758.T Sony Corporation Sony Company: Sony Group Corporation stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:44:57.518283",
+    "symbol": "6758.T",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "6758.t"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "6758.T",
+      "company_name": "Sony Group Corporation",
+      "title": "Sony Group Corporation (6758.T) Market Data",
+      "content": "\n                Current Price: $3740.00\n                Previous Close: $3683.00\n                Market Cap: $22,511,808,937,984\n                P/E Ratio: 19.911621\n                Volume: 7,470,400\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:44:57.518283",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "6758.t"
+      ],
+      "metadata": {
+        "symbol": "6758.T",
+        "company_name": "Sony Group Corporation",
+        "sector": "Technology",
+        "current_price": 3740.0,
+        "previous_close": 3683.0,
+        "market_cap": 22511808937984,
+        "pe_ratio": 19.911621,
+        "volume": 7470400,
+        "avg_volume": 17568094,
+        "timestamp": "2025-05-27T01:44:57.518283",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 24,
+    "text": "ASML Holding N.V. (ASML) Market Data \n                Current Price: $732.49\n                Previous Close: $740.70\n                Market Cap: $292,605,591,552\n                P/E Ratio: 29.241117\n                Volume: 1,524,200\n                Sector: Technology\n                 Stock symbol: ASML ASML Holding ASML Company: ASML Holding N.V. stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:44:58.116432",
+    "symbol": "ASML",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "asml"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "ASML",
+      "company_name": "ASML Holding N.V.",
+      "title": "ASML Holding N.V. (ASML) Market Data",
+      "content": "\n                Current Price: $732.49\n                Previous Close: $740.70\n                Market Cap: $292,605,591,552\n                P/E Ratio: 29.241117\n                Volume: 1,524,200\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:44:58.116432",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "asml"
+      ],
+      "metadata": {
+        "symbol": "ASML",
+        "company_name": "ASML Holding N.V.",
+        "sector": "Technology",
+        "current_price": 732.489990234375,
+        "previous_close": 740.7000122070312,
+        "market_cap": 292605591552,
+        "pe_ratio": 29.241117,
+        "volume": 1524200,
+        "avg_volume": 1668957,
+        "timestamp": "2025-05-27T01:44:58.116432",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 25,
+    "text": "SoftBank Group Corp. (9984.T) Market Data \n                Current Price: $7631.00\n                Previous Close: $7464.00\n                Market Cap: $10,912,406,700,032\n                P/E Ratio: 9.792875\n                Volume: 4,773,900\n                Sector: Communication Services\n                 Stock symbol: 9984.T SoftBank Group SoftBank Company: SoftBank Group Corp. stock price market data financial metrics",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:44:58.777558",
+    "symbol": "9984.T",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "9984.t"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "9984.T",
+      "company_name": "SoftBank Group Corp.",
+      "title": "SoftBank Group Corp. (9984.T) Market Data",
+      "content": "\n                Current Price: $7631.00\n                Previous Close: $7464.00\n                Market Cap: $10,912,406,700,032\n                P/E Ratio: 9.792875\n                Volume: 4,773,900\n                Sector: Communication Services\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:44:58.777558",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "9984.t"
+      ],
+      "metadata": {
+        "symbol": "9984.T",
+        "company_name": "SoftBank Group Corp.",
+        "sector": "Communication Services",
+        "current_price": 7631.0,
+        "previous_close": 7464.0,
+        "market_cap": 10912406700032,
+        "pe_ratio": 9.792875,
+        "volume": 4773900,
+        "avg_volume": 8043405,
+        "timestamp": "2025-05-27T01:44:58.777558",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 26,
+    "text": "Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance. quarterly results financial performance financial news market news business news",
+    "source": "news_marketwatch_topstories",
+    "content_type": "news_article",
+    "timestamp": "2025-05-27T01:45:01.696584",
+    "symbol": "",
+    "tags": [
+      "ai",
+      "earnings",
+      "market_events",
+      "tech_earnings",
+      "guidance",
+      "tech_general",
+      "positive_sentiment",
+      "nvidia",
+      "tech_companies",
+      "financial_news",
+      "market_news"
+    ],
+    "metadata": {
+      "content_type": "news_article",
+      "title": "Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks",
+      "content": "Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance.",
+      "summary": "The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance.",
+      "source": "news_marketwatch_topstories",
+      "timestamp": "2025-05-27T01:45:01.696584",
+      "link": "https://www.marketwatch.com/story/nvidias-stock-is-losing-steam-and-next-weeks-earnings-could-underscore-the-risks-f14e3989?mod=mw_rss_topstories",
+      "published_date": "2025-05-26T14:28:00",
+      "tags": [
+        "ai",
+        "earnings",
+        "market_events",
+        "tech_earnings",
+        "guidance",
+        "tech_general",
+        "positive_sentiment",
+        "nvidia",
+        "tech_companies",
+        "financial_news",
+        "market_news"
+      ],
+      "metadata": {
+        "title": "Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks",
+        "summary": "The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance.",
+        "link": "https://www.marketwatch.com/story/nvidias-stock-is-losing-steam-and-next-weeks-earnings-could-underscore-the-risks-f14e3989?mod=mw_rss_topstories",
+        "published_date": "2025-05-26T14:28:00",
+        "source": "marketwatch_topstories",
+        "content_type": "news_article",
+        "tags": [
+          "ai",
+          "earnings",
+          "market_events",
+          "tech_earnings",
+          "guidance",
+          "tech_general",
+          "positive_sentiment",
+          "nvidia",
+          "tech_companies"
+        ],
+        "timestamp": "2025-05-27T01:45:01.696584",
+        "word_count": 33,
+        "quality_score": 0.85,
+        "article_hash": "5b0b2654d52e"
+      }
+    }
+  },
+  {
+    "id": 27,
+    "text": "These are the 4 big things we're watching in the stock market in the week ahead These are the 4 big things we're watching in the stock market in the week ahead In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight. financial news market news business news",
+    "source": "news_cnbc_finance",
+    "content_type": "news_article",
+    "timestamp": "2025-05-27T01:45:06.764243",
+    "symbol": "",
+    "tags": [
+      "market_general",
+      "americas",
+      "market",
+      "international",
+      "tech_general",
+      "tech",
+      "nvidia",
+      "tech_companies",
+      "financial_news",
+      "market_news"
+    ],
+    "metadata": {
+      "content_type": "news_article",
+      "title": "These are the 4 big things we're watching in the stock market in the week ahead",
+      "content": "These are the 4 big things we're watching in the stock market in the week ahead In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight.",
+      "summary": "In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight.",
+      "source": "news_cnbc_finance",
+      "timestamp": "2025-05-27T01:45:06.764243",
+      "link": "https://www.cnbc.com/2025/05/26/these-are-the-4-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
+      "published_date": "2025-05-26T15:22:15",
+      "tags": [
+        "market_general",
+        "americas",
+        "market",
+        "international",
+        "tech_general",
+        "tech",
+        "nvidia",
+        "tech_companies",
+        "financial_news",
+        "market_news"
+      ],
+      "metadata": {
+        "title": "These are the 4 big things we're watching in the stock market in the week ahead",
+        "summary": "In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight.",
+        "link": "https://www.cnbc.com/2025/05/26/these-are-the-4-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
+        "published_date": "2025-05-26T15:22:15",
+        "source": "cnbc_finance",
+        "content_type": "news_article",
+        "tags": [
+          "market_general",
+          "americas",
+          "market",
+          "international",
+          "tech_general",
+          "tech",
+          "nvidia",
+          "tech_companies"
+        ],
+        "timestamp": "2025-05-27T01:45:06.764243",
+        "word_count": 35,
+        "quality_score": 0.8,
+        "article_hash": "c648f46008b6"
+      }
+    }
+  },
+  {
+    "id": 28,
+    "text": "Brazil Keeps Bungling Its Budget and Worrying Investors Brazil Keeps Bungling Its Budget and Worrying Investors An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead. quarterly results financial performance financial news market news business news",
+    "source": "news_bloomberg_markets",
+    "content_type": "news_article",
+    "timestamp": "2025-05-27T01:45:15.100792",
+    "symbol": "",
+    "tags": [
+      "market_general",
+      "americas",
+      "market",
+      "international",
+      "eps",
+      "earnings",
+      "financial_news",
+      "market_news"
+    ],
+    "metadata": {
+      "content_type": "news_article",
+      "title": "Brazil Keeps Bungling Its Budget and Worrying Investors",
+      "content": "Brazil Keeps Bungling Its Budget and Worrying Investors An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead.",
+      "summary": "An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead.",
+      "source": "news_bloomberg_markets",
+      "timestamp": "2025-05-27T01:45:15.100792",
+      "link": "https://www.bloomberg.com/news/articles/2025-05-26/brazil-keeps-bungling-its-budget-and-worrying-investors",
+      "published_date": "2025-05-26T17:27:16",
+      "tags": [
+        "market_general",
+        "americas",
+        "market",
+        "international",
+        "eps",
+        "earnings",
+        "financial_news",
+        "market_news"
+      ],
+      "metadata": {
+        "title": "Brazil Keeps Bungling Its Budget and Worrying Investors",
+        "summary": "An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead.",
+        "link": "https://www.bloomberg.com/news/articles/2025-05-26/brazil-keeps-bungling-its-budget-and-worrying-investors",
+        "published_date": "2025-05-26T17:27:16",
+        "source": "bloomberg_markets",
+        "content_type": "news_article",
+        "tags": [
+          "market_general",
+          "americas",
+          "market",
+          "international",
+          "eps",
+          "earnings"
+        ],
+        "timestamp": "2025-05-27T01:45:15.100792",
+        "word_count": 35,
+        "quality_score": 0.85,
+        "article_hash": "5f0b23368785"
+      }
+    }
+  },
+  {
+    "id": 29,
+    "text": "Dai-Ichi Life Sees JGB Market Volatility Declining by Year End Dai-Ichi Life Sees JGB Market Volatility Declining by Year End The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer. financial news market news business news",
+    "source": "news_bloomberg_markets",
+    "content_type": "news_article",
+    "timestamp": "2025-05-27T01:45:15.101472",
+    "symbol": "",
+    "tags": [
+      "asia",
+      "market_general",
+      "economy",
+      "ai",
+      "economic",
+      "market",
+      "international",
+      "market_economy",
+      "tech_general",
+      "asia_tech",
+      "negative_sentiment",
+      "financial_news",
+      "market_news"
+    ],
+    "metadata": {
+      "content_type": "news_article",
+      "title": "Dai-Ichi Life Sees JGB Market Volatility Declining by Year End",
+      "content": "Dai-Ichi Life Sees JGB Market Volatility Declining by Year End The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer.",
+      "summary": "The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer.",
+      "source": "news_bloomberg_markets",
+      "timestamp": "2025-05-27T01:45:15.101472",
+      "link": "https://www.bloomberg.com/news/articles/2025-05-26/dai-ichi-life-sees-jgb-market-volatility-declining-by-year-end",
+      "published_date": "2025-05-26T15:00:00",
+      "tags": [
+        "asia",
+        "market_general",
+        "economy",
+        "ai",
+        "economic",
+        "market",
+        "international",
+        "market_economy",
+        "tech_general",
+        "asia_tech",
+        "negative_sentiment",
+        "financial_news",
+        "market_news"
+      ],
+      "metadata": {
+        "title": "Dai-Ichi Life Sees JGB Market Volatility Declining by Year End",
+        "summary": "The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer.",
+        "link": "https://www.bloomberg.com/news/articles/2025-05-26/dai-ichi-life-sees-jgb-market-volatility-declining-by-year-end",
+        "published_date": "2025-05-26T15:00:00",
+        "source": "bloomberg_markets",
+        "content_type": "news_article",
+        "tags": [
+          "asia",
+          "market_general",
+          "economy",
+          "ai",
+          "economic",
+          "market",
+          "international",
+          "market_economy",
+          "tech_general",
+          "asia_tech",
+          "negative_sentiment"
+        ],
+        "timestamp": "2025-05-27T01:45:15.101472",
+        "word_count": 48,
+        "quality_score": 0.95,
+        "article_hash": "8411450936b9"
+      }
+    }
+  },
+  {
+    "id": 30,
+    "text": "TITLE: Taiwan Semiconductor Manufacturing Company Limited (TSM) Market Data CONTENT: \n                Current Price: $191.98\n                Previous Close: $196.19\n                Market Cap: $995,708,108,800\n                P/E Ratio: 23.102285\n                Volume: 9,394,700\n                Sector: Technology\n                 CATEGORY: stock market data financial metrics trading information REGION: Asia Asian markets APAC technology sector COMPANY: Taiwan Semiconductor Manufacturing Company TSMC chip foundry semiconductor leader",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:56:47.675878",
+    "symbol": "TSM",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "tsm"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "TSM",
+      "company_name": "Taiwan Semiconductor Manufacturing Company Limited",
+      "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Market Data",
+      "content": "\n                Current Price: $191.98\n                Previous Close: $196.19\n                Market Cap: $995,708,108,800\n                P/E Ratio: 23.102285\n                Volume: 9,394,700\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:56:47.675878",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "tsm"
+      ],
+      "metadata": {
+        "symbol": "TSM",
+        "company_name": "Taiwan Semiconductor Manufacturing Company Limited",
+        "sector": "Technology",
+        "current_price": 191.97999572753906,
+        "previous_close": 196.19000244140625,
+        "market_cap": 995708108800,
+        "pe_ratio": 23.102285,
+        "volume": 9394700,
+        "avg_volume": 17365962,
+        "timestamp": "2025-05-27T01:56:47.675878",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 31,
+    "text": "TITLE: Samsung Electronics Co., Ltd. (005930.KS) Market Data CONTENT: \n                Current Price: $54700.00\n                Previous Close: $54200.00\n                Market Cap: $357,481,435,889,664\n                P/E Ratio: 0\n                Volume: 10,901,337\n                Sector: Technology\n                 CATEGORY: stock market data financial metrics trading information REGION: Asia Asian markets APAC technology sector COMPANY: Samsung Electronics Samsung Korean technology memory semiconductors smartphones",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:56:48.379283",
+    "symbol": "005930.KS",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "005930.ks"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "005930.KS",
+      "company_name": "Samsung Electronics Co., Ltd.",
+      "title": "Samsung Electronics Co., Ltd. (005930.KS) Market Data",
+      "content": "\n                Current Price: $54700.00\n                Previous Close: $54200.00\n                Market Cap: $357,481,435,889,664\n                P/E Ratio: 0\n                Volume: 10,901,337\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:56:48.379283",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "005930.ks"
+      ],
+      "metadata": {
+        "symbol": "005930.KS",
+        "company_name": "Samsung Electronics Co., Ltd.",
+        "sector": "Technology",
+        "current_price": 54700.0,
+        "previous_close": 54200.0,
+        "market_cap": 357481435889664,
+        "pe_ratio": 0,
+        "volume": 10901337,
+        "avg_volume": 16639708,
+        "timestamp": "2025-05-27T01:56:48.379283",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 32,
+    "text": "TITLE: Alibaba Group Holding Limited (BABA) Market Data CONTENT: \n                Current Price: $120.73\n                Previous Close: $121.48\n                Market Cap: $289,633,697,792\n                P/E Ratio: 16.22715\n                Volume: 7,156,900\n                Sector: Consumer Cyclical\n                 CATEGORY: stock market data financial metrics trading information REGION: Asia Asian markets APAC technology sector COMPANY: Alibaba Group Chinese ecommerce cloud computing digital economy",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:56:49.088988",
+    "symbol": "BABA",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "baba"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "BABA",
+      "company_name": "Alibaba Group Holding Limited",
+      "title": "Alibaba Group Holding Limited (BABA) Market Data",
+      "content": "\n                Current Price: $120.73\n                Previous Close: $121.48\n                Market Cap: $289,633,697,792\n                P/E Ratio: 16.22715\n                Volume: 7,156,900\n                Sector: Consumer Cyclical\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:56:49.088988",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "baba"
+      ],
+      "metadata": {
+        "symbol": "BABA",
+        "company_name": "Alibaba Group Holding Limited",
+        "sector": "Consumer Cyclical",
+        "current_price": 120.7300033569336,
+        "previous_close": 121.4800033569336,
+        "market_cap": 289633697792,
+        "pe_ratio": 16.22715,
+        "volume": 7156900,
+        "avg_volume": 22649790,
+        "timestamp": "2025-05-27T01:56:49.088988",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 33,
+    "text": "TITLE: Tencent Holdings Limited (TCEHY) Market Data CONTENT: \n                Current Price: $65.76\n                Previous Close: $65.37\n                Market Cap: $602,333,380,608\n                P/E Ratio: 23.15493\n                Volume: 1,432,200\n                Sector: Communication Services\n                 CATEGORY: stock market data financial metrics trading information REGION: Asia Asian markets APAC technology sector COMPANY: Tencent Holdings Chinese internet gaming social media WeChat",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:56:49.807963",
+    "symbol": "TCEHY",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "tcehy"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "TCEHY",
+      "company_name": "Tencent Holdings Limited",
+      "title": "Tencent Holdings Limited (TCEHY) Market Data",
+      "content": "\n                Current Price: $65.76\n                Previous Close: $65.37\n                Market Cap: $602,333,380,608\n                P/E Ratio: 23.15493\n                Volume: 1,432,200\n                Sector: Communication Services\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:56:49.807963",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "tcehy"
+      ],
+      "metadata": {
+        "symbol": "TCEHY",
+        "company_name": "Tencent Holdings Limited",
+        "sector": "Communication Services",
+        "current_price": 65.76000213623047,
+        "previous_close": 65.37000274658203,
+        "market_cap": 602333380608,
+        "pe_ratio": 23.15493,
+        "volume": 1432200,
+        "avg_volume": 4292209,
+        "timestamp": "2025-05-27T01:56:49.807963",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "text": "TITLE: Sony Group Corporation (6758.T) Market Data CONTENT: \n                Current Price: $3740.00\n                Previous Close: $3683.00\n                Market Cap: $22,511,808,937,984\n                P/E Ratio: 19.911621\n                Volume: 7,470,400\n                Sector: Technology\n                 CATEGORY: stock market data financial metrics trading information REGION: Asia Asian markets APAC technology sector COMPANY: Sony Corporation Japanese electronics entertainment gaming PlayStation",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:56:50.529203",
+    "symbol": "6758.T",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "6758.t"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "6758.T",
+      "company_name": "Sony Group Corporation",
+      "title": "Sony Group Corporation (6758.T) Market Data",
+      "content": "\n                Current Price: $3740.00\n                Previous Close: $3683.00\n                Market Cap: $22,511,808,937,984\n                P/E Ratio: 19.911621\n                Volume: 7,470,400\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:56:50.529203",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "6758.t"
+      ],
+      "metadata": {
+        "symbol": "6758.T",
+        "company_name": "Sony Group Corporation",
+        "sector": "Technology",
+        "current_price": 3740.0,
+        "previous_close": 3683.0,
+        "market_cap": 22511808937984,
+        "pe_ratio": 19.911621,
+        "volume": 7470400,
+        "avg_volume": 17568094,
+        "timestamp": "2025-05-27T01:56:50.529203",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 35,
+    "text": "TITLE: ASML Holding N.V. (ASML) Market Data CONTENT: \n                Current Price: $732.49\n                Previous Close: $740.70\n                Market Cap: $292,605,591,552\n                P/E Ratio: 29.241117\n                Volume: 1,524,200\n                Sector: Technology\n                 CATEGORY: stock market data financial metrics trading information",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:56:51.226365",
+    "symbol": "ASML",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "asml"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "ASML",
+      "company_name": "ASML Holding N.V.",
+      "title": "ASML Holding N.V. (ASML) Market Data",
+      "content": "\n                Current Price: $732.49\n                Previous Close: $740.70\n                Market Cap: $292,605,591,552\n                P/E Ratio: 29.241117\n                Volume: 1,524,200\n                Sector: Technology\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:56:51.226365",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "asml"
+      ],
+      "metadata": {
+        "symbol": "ASML",
+        "company_name": "ASML Holding N.V.",
+        "sector": "Technology",
+        "current_price": 732.489990234375,
+        "previous_close": 740.7000122070312,
+        "market_cap": 292605591552,
+        "pe_ratio": 29.241117,
+        "volume": 1524200,
+        "avg_volume": 1668957,
+        "timestamp": "2025-05-27T01:56:51.226365",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 36,
+    "text": "TITLE: SoftBank Group Corp. (9984.T) Market Data CONTENT: \n                Current Price: $7631.00\n                Previous Close: $7464.00\n                Market Cap: $10,912,406,700,032\n                P/E Ratio: 9.792875\n                Volume: 4,773,900\n                Sector: Communication Services\n                 CATEGORY: stock market data financial metrics trading information REGION: Asia Asian markets APAC technology sector COMPANY: SoftBank Group Japanese conglomerate Vision Fund telecommunications",
+    "source": "yahoo_finance_market",
+    "content_type": "market_data",
+    "timestamp": "2025-05-27T01:56:51.964657",
+    "symbol": "9984.T",
+    "tags": [
+      "market_data",
+      "asia_tech",
+      "9984.t"
+    ],
+    "metadata": {
+      "content_type": "market_data",
+      "symbol": "9984.T",
+      "company_name": "SoftBank Group Corp.",
+      "title": "SoftBank Group Corp. (9984.T) Market Data",
+      "content": "\n                Current Price: $7631.00\n                Previous Close: $7464.00\n                Market Cap: $10,912,406,700,032\n                P/E Ratio: 9.792875\n                Volume: 4,773,900\n                Sector: Communication Services\n                ",
+      "source": "yahoo_finance_market",
+      "timestamp": "2025-05-27T01:56:51.964657",
+      "tags": [
+        "market_data",
+        "asia_tech",
+        "9984.t"
+      ],
+      "metadata": {
+        "symbol": "9984.T",
+        "company_name": "SoftBank Group Corp.",
+        "sector": "Communication Services",
+        "current_price": 7631.0,
+        "previous_close": 7464.0,
+        "market_cap": 10912406700032,
+        "pe_ratio": 9.792875,
+        "volume": 4773900,
+        "avg_volume": 8043405,
+        "timestamp": "2025-05-27T01:56:51.964657",
+        "source": "yahoo_finance"
+      }
+    }
+  },
+  {
+    "id": 37,
+    "text": "TITLE: Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks SUMMARY: The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance. CONTENT: Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance. CATEGORY: financial news market news business news economic updates",
+    "source": "news_marketwatch_topstories",
+    "content_type": "news_article",
+    "timestamp": "2025-05-27T01:56:55.771674",
+    "symbol": "",
+    "tags": [
+      "tech_companies",
+      "nvidia",
+      "tech_general",
+      "ai",
+      "tech_earnings",
+      "market_events",
+      "guidance",
+      "positive_sentiment",
+      "earnings",
+      "financial_news",
+      "market_news"
+    ],
+    "metadata": {
+      "content_type": "news_article",
+      "title": "Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks",
+      "content": "Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance.",
+      "summary": "The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance.",
+      "source": "news_marketwatch_topstories",
+      "timestamp": "2025-05-27T01:56:55.771674",
+      "link": "https://www.marketwatch.com/story/nvidias-stock-is-losing-steam-and-next-weeks-earnings-could-underscore-the-risks-f14e3989?mod=mw_rss_topstories",
+      "published_date": "2025-05-26T14:28:00",
+      "tags": [
+        "tech_companies",
+        "nvidia",
+        "tech_general",
+        "ai",
+        "tech_earnings",
+        "market_events",
+        "guidance",
+        "positive_sentiment",
+        "earnings",
+        "financial_news",
+        "market_news"
+      ],
+      "metadata": {
+        "title": "Nvidia\u2019s stock is losing steam, and this week\u2019s earnings could underscore the risks",
+        "summary": "The chip stock snapped a four-week streak of gains. BofA analysts say this week\u2019s earnings report could include \u201cmessy\u201d guidance.",
+        "link": "https://www.marketwatch.com/story/nvidias-stock-is-losing-steam-and-next-weeks-earnings-could-underscore-the-risks-f14e3989?mod=mw_rss_topstories",
+        "published_date": "2025-05-26T14:28:00",
+        "source": "marketwatch_topstories",
+        "content_type": "news_article",
+        "tags": [
+          "tech_companies",
+          "nvidia",
+          "tech_general",
+          "ai",
+          "tech_earnings",
+          "market_events",
+          "guidance",
+          "positive_sentiment",
+          "earnings"
+        ],
+        "timestamp": "2025-05-27T01:56:55.771674",
+        "word_count": 33,
+        "quality_score": 0.85,
+        "article_hash": "5b0b2654d52e"
+      }
+    }
+  },
+  {
+    "id": 38,
+    "text": "TITLE: These are the 4 big things we're watching in the stock market in the week ahead SUMMARY: In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight. CONTENT: These are the 4 big things we're watching in the stock market in the week ahead In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight. CATEGORY: financial news market news business news economic updates",
+    "source": "news_cnbc_finance",
+    "content_type": "news_article",
+    "timestamp": "2025-05-27T01:57:02.432315",
+    "symbol": "",
+    "tags": [
+      "tech_companies",
+      "nvidia",
+      "tech_general",
+      "market_general",
+      "international",
+      "americas",
+      "market",
+      "tech",
+      "financial_news",
+      "market_news"
+    ],
+    "metadata": {
+      "content_type": "news_article",
+      "title": "These are the 4 big things we're watching in the stock market in the week ahead",
+      "content": "These are the 4 big things we're watching in the stock market in the week ahead In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight.",
+      "summary": "In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight.",
+      "source": "news_cnbc_finance",
+      "timestamp": "2025-05-27T01:57:02.432315",
+      "link": "https://www.cnbc.com/2025/05/26/these-are-the-4-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
+      "published_date": "2025-05-26T15:22:15",
+      "tags": [
+        "tech_companies",
+        "nvidia",
+        "tech_general",
+        "market_general",
+        "international",
+        "americas",
+        "market",
+        "tech",
+        "financial_news",
+        "market_news"
+      ],
+      "metadata": {
+        "title": "These are the 4 big things we're watching in the stock market in the week ahead",
+        "summary": "In the week ahead, another great American tech giant \u2014 Club name Nvidia \u2014 will be in the spotlight.",
+        "link": "https://www.cnbc.com/2025/05/26/these-are-the-4-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
+        "published_date": "2025-05-26T15:22:15",
+        "source": "cnbc_finance",
+        "content_type": "news_article",
+        "tags": [
+          "tech_companies",
+          "nvidia",
+          "tech_general",
+          "market_general",
+          "international",
+          "americas",
+          "market",
+          "tech"
+        ],
+        "timestamp": "2025-05-27T01:57:02.432315",
+        "word_count": 35,
+        "quality_score": 0.8,
+        "article_hash": "c648f46008b6"
+      }
+    }
+  },
+  {
+    "id": 39,
+    "text": "TITLE: Brazil Keeps Bungling Its Budget and Worrying Investors SUMMARY: An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead. CONTENT: Brazil Keeps Bungling Its Budget and Worrying Investors An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead. CATEGORY: financial news market news business news economic updates",
+    "source": "news_bloomberg_markets",
+    "content_type": "news_article",
+    "timestamp": "2025-05-27T01:57:13.174904",
+    "symbol": "",
+    "tags": [
+      "market_general",
+      "international",
+      "eps",
+      "americas",
+      "market",
+      "earnings",
+      "financial_news",
+      "market_news"
+    ],
+    "metadata": {
+      "content_type": "news_article",
+      "title": "Brazil Keeps Bungling Its Budget and Worrying Investors",
+      "content": "Brazil Keeps Bungling Its Budget and Worrying Investors An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead.",
+      "summary": "An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead.",
+      "source": "news_bloomberg_markets",
+      "timestamp": "2025-05-27T01:57:13.174904",
+      "link": "https://www.bloomberg.com/news/articles/2025-05-26/brazil-keeps-bungling-its-budget-and-worrying-investors",
+      "published_date": "2025-05-26T17:27:16",
+      "tags": [
+        "market_general",
+        "international",
+        "eps",
+        "americas",
+        "market",
+        "earnings",
+        "financial_news",
+        "market_news"
+      ],
+      "metadata": {
+        "title": "Brazil Keeps Bungling Its Budget and Worrying Investors",
+        "summary": "An unmistakable sense of deja vu hit Brazil last week when an announcement of measures meant to shore up the nation\u2019s budget sparked a market selloff instead.",
+        "link": "https://www.bloomberg.com/news/articles/2025-05-26/brazil-keeps-bungling-its-budget-and-worrying-investors",
+        "published_date": "2025-05-26T17:27:16",
+        "source": "bloomberg_markets",
+        "content_type": "news_article",
+        "tags": [
+          "market_general",
+          "international",
+          "eps",
+          "americas",
+          "market",
+          "earnings"
+        ],
+        "timestamp": "2025-05-27T01:57:13.174904",
+        "word_count": 35,
+        "quality_score": 0.85,
+        "article_hash": "5f0b23368785"
+      }
+    }
+  },
+  {
+    "id": 40,
+    "text": "TITLE: Dai-Ichi Life Sees JGB Market Volatility Declining by Year End SUMMARY: The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer. CONTENT: Dai-Ichi Life Sees JGB Market Volatility Declining by Year End The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer. CATEGORY: financial news market news business news economic updates",
+    "source": "news_bloomberg_markets",
+    "content_type": "news_article",
+    "timestamp": "2025-05-27T01:57:13.175634",
+    "symbol": "",
+    "tags": [
+      "negative_sentiment",
+      "economy",
+      "tech_general",
+      "ai",
+      "asia_tech",
+      "economic",
+      "market_general",
+      "international",
+      "asia",
+      "market_economy",
+      "market",
+      "financial_news",
+      "market_news"
+    ],
+    "metadata": {
+      "content_type": "news_article",
+      "title": "Dai-Ichi Life Sees JGB Market Volatility Declining by Year End",
+      "content": "Dai-Ichi Life Sees JGB Market Volatility Declining by Year End The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer.",
+      "summary": "The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer.",
+      "source": "news_bloomberg_markets",
+      "timestamp": "2025-05-27T01:57:13.175634",
+      "link": "https://www.bloomberg.com/news/articles/2025-05-26/dai-ichi-life-sees-jgb-market-volatility-declining-by-year-end",
+      "published_date": "2025-05-26T15:00:00",
+      "tags": [
+        "negative_sentiment",
+        "economy",
+        "tech_general",
+        "ai",
+        "asia_tech",
+        "economic",
+        "market_general",
+        "international",
+        "asia",
+        "market_economy",
+        "market",
+        "financial_news",
+        "market_news"
+      ],
+      "metadata": {
+        "title": "Dai-Ichi Life Sees JGB Market Volatility Declining by Year End",
+        "summary": "The surging bond yields that have saddled Japan\u2019s insurers with billions of dollars in unrealized losses will weaken because they are not supported by economic fundamentals, according to Dai-ichi Life Holdings Inc., the country\u2019s largest listed life insurer.",
+        "link": "https://www.bloomberg.com/news/articles/2025-05-26/dai-ichi-life-sees-jgb-market-volatility-declining-by-year-end",
+        "published_date": "2025-05-26T15:00:00",
+        "source": "bloomberg_markets",
+        "content_type": "news_article",
+        "tags": [
+          "negative_sentiment",
+          "economy",
+          "tech_general",
+          "ai",
+          "asia_tech",
+          "economic",
+          "market_general",
+          "international",
+          "asia",
+          "market_economy",
+          "market"
+        ],
+        "timestamp": "2025-05-27T01:57:13.175634",
+        "word_count": 48,
+        "quality_score": 0.95,
+        "article_hash": "8411450936b9"
+      }
+    }
+  }
+]
