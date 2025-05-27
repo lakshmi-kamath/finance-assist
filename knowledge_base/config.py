@@ -1,54 +1,51 @@
 import os
 from typing import Dict
 from dotenv import load_dotenv
+
 load_dotenv()
 
-def get_knowledge_base_config() -> Dict:
-    """Get knowledge base configuration with enhanced foreign exchange support"""
+def get_config() -> Dict:
+    """Get knowledge base configuration."""
     return {
-        'alphavantage_api_key': os.getenv('ALPHAVANTAGE_API_KEY', 'demo'),
-        'fred_api_key': os.getenv('FRED_API_KEY', 'demo'),
-        'quandl_api_key': os.getenv('QUANDL_API_KEY', 'demo'),
-        'polygon_api_key': os.getenv('POLYGON_API_KEY', 'demo'),
-        'finnhub_api_key': os.getenv('FINNHUB_API_KEY', 'demo'),
-        
         'vector_store': {
             'embedding_model': 'sentence-transformers/all-MiniLM-L6-v2',
-            'index_path': 'knowledge_base/vector_store/faiss_index',
-            'metadata_path': 'knowledge_base/vector_store/metadata.json',
-            'max_documents': 15000,  # Increased for foreign exchange filings
-            'similarity_threshold': 0.5
+            'index_path': 'knowledge_base/vector_store/faiss.index',
+            'metadata_path': 'knowledge_base/vector_store/metadata.pkl',
+            'index_type': 'flat',
+            'dimension': 384,
+            'max_documents': 15000,
+            'similarity_threshold': 0.7,
+            'default_k': 5
         },
-        'fred_config': {
-            'rate_limit_seconds': 0.1,
-            'max_retries': 3,
-            'default_lookback_days': 30,
-            'comprehensive_lookback_days': 90,
-            'high_priority_indicators': ['INTEREST_RATE', 'VIX', 'USD_INDEX']
+        'processing': {
+            'chunk_size': 1000,
+            'chunk_overlap': 200,
+            'batch_size': 100,
+            'max_content_length': 5000,
+            'enable_content_extraction': True
         },
         'data_collection': {
             'news_sources': [
                 'reuters_finance',
-                'marketwatch', 
+                'marketwatch',
                 'yahoo_finance_news',
-                'nikkei_asia',  # Added for Asian market coverage
+                'nikkei_asia',
                 'korea_herald_business'
             ],
             'asia_tech_symbols': [
-                'TSM',        # Taiwan Semiconductor (NYSE ADR)
-                '005930.KS',  # Samsung Electronics (Korea)
-                'BABA',       # Alibaba (NYSE ADR) 
-                'TCEHY',      # Tencent (OTC ADR)
-                '6758.T',     # Sony Group (Tokyo)
-                'ASML',       # ASML (NASDAQ ADR)
-                '9984.T',     # SoftBank Group (Tokyo)
-                '0700.HK'     # Tencent Holdings (Hong Kong)
+                'TSM', '005930.KS', 'BABA', 'TCEHY', '6758.T', 'ASML', '9984.T', '0700.HK'
             ],
             'update_frequency_hours': 4,
             'news_lookback_hours': 24,
             'filing_lookback_days': 90
         },
-        
+        'api_keys': {
+            'alphavantage': os.getenv('ALPHAVANTAGE_API_KEY', 'demo'),
+            'fred': os.getenv('FRED_API_KEY', 'demo'),
+            'quandl': os.getenv('QUANDL_API_KEY', 'demo'),
+            'polygon': os.getenv('POLYGON_API_KEY', 'demo'),
+            'finnhub': os.getenv('FINNHUB_API_KEY', 'demo')
+        },
         'foreign_exchanges': {
             'KSE': {
                 'name': 'Korea Stock Exchange',
@@ -97,27 +94,7 @@ def get_knowledge_base_config() -> Dict:
                 }
             }
         },
-        
-        'processing': {
-            'chunk_size': 512,
-            'chunk_overlap': 50,
-            'batch_size': 100,
-            'max_content_length': 5000,  # For filing content
-            'enable_content_extraction': True
-        },
-        
-        'fallback_options': {
-            'enable_fallback_scraping': True,
-            'fallback_sources': [
-                'company_investor_relations',
-                'financial_portals',
-                'regulatory_announcements'
-            ],
-            'fallback_timeout_seconds': 30
-        },
-        
         'company_mappings': {
-            # Korean companies
             '005930.KS': {
                 'name': 'Samsung Electronics Co Ltd',
                 'english_name': 'Samsung Electronics',
@@ -125,54 +102,6 @@ def get_knowledge_base_config() -> Dict:
                 'country': 'South Korea',
                 'currency': 'KRW'
             },
-            '000660.KS': {
-                'name': 'SK Hynix Inc',
-                'english_name': 'SK Hynix',
-                'sector': 'Semiconductors',
-                'country': 'South Korea',
-                'currency': 'KRW'
-            },
-            '035420.KS': {
-                'name': 'NAVER Corporation',
-                'english_name': 'NAVER',
-                'sector': 'Internet Services',
-                'country': 'South Korea',
-                'currency': 'KRW'
-            },
-            
-            # Japanese companies
-            '6758.T': {
-                'name': 'Sony Group Corporation',
-                'english_name': 'Sony Group',
-                'sector': 'Consumer Electronics',
-                'country': 'Japan',
-                'currency': 'JPY'
-            },
-            '9984.T': {
-                'name': 'SoftBank Group Corp',
-                'english_name': 'SoftBank Group',
-                'sector': 'Telecommunications',
-                'country': 'Japan',
-                'currency': 'JPY'
-            },
-            '7203.T': {
-                'name': 'Toyota Motor Corporation',
-                'english_name': 'Toyota Motor',
-                'sector': 'Automotive',
-                'country': 'Japan',
-                'currency': 'JPY'
-            },
-            
-            # Hong Kong companies
-            '0700.HK': {
-                'name': 'Tencent Holdings Limited',
-                'english_name': 'Tencent Holdings',
-                'sector': 'Internet Services',
-                'country': 'Hong Kong',
-                'currency': 'HKD'
-            },
-            
-            # US-listed ADRs
             'TSM': {
                 'name': 'Taiwan Semiconductor Manufacturing Company Limited',
                 'english_name': 'TSMC',
@@ -188,6 +117,27 @@ def get_knowledge_base_config() -> Dict:
                 'country': 'China',
                 'currency': 'USD',
                 'listing_type': 'ADR'
+            },
+            '6758.T': {
+                'name': 'Sony Group Corporation',
+                'english_name': 'Sony Group',
+                'sector': 'Consumer Electronics',
+                'country': 'Japan',
+                'currency': 'JPY'
+            },
+            '9984.T': {
+                'name': 'SoftBank Group Corp',
+                'english_name': 'SoftBank Group',
+                'sector': 'Telecommunications',
+                'country': 'Japan',
+                'currency': 'JPY'
+            },
+            '0700.HK': {
+                'name': 'Tencent Holdings Limited',
+                'english_name': 'Tencent Holdings',
+                'sector': 'Internet Services',
+                'country': 'Hong Kong',
+                'currency': 'HKD'
             },
             'TCEHY': {
                 'name': 'Tencent Holdings Limited',
@@ -205,21 +155,5 @@ def get_knowledge_base_config() -> Dict:
                 'currency': 'USD',
                 'listing_type': 'ADR'
             }
-        },
-        
-        'monitoring': {
-            'enable_pipeline_monitoring': True,
-            'log_level': 'INFO',
-            'max_log_size_mb': 100,
-            'alert_on_failures': True,
-            'success_rate_threshold': 0.8
-        },
-        
-        'scheduling': {
-            'market_data_frequency': '4h',
-            'news_frequency': '6h',
-            'filings_frequency': '24h',
-            'comprehensive_update_frequency': '7d',
-            'timezone': 'UTC'
         }
     }

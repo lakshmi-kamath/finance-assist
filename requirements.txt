@@ -40,3 +40,4 @@ dash>=2.0.0
 langchain
 whisper
 pyttsx3
+tiktoken

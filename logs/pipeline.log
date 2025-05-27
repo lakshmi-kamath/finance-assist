@@ -1,0 +1,193 @@
+2025-05-27 18:32:46,408 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-05-27 18:32:46,408 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-05-27 18:32:50,702 - knowledge_base.knowledge_base_manager - INFO - Starting with empty FAISS index
+2025-05-27 18:32:50,704 - data_ingestion.api_collectors.fred_collector - INFO - Fetching FRED data with dynamic lookback...
+2025-05-27 18:33:00,238 - data_ingestion.api_collectors.fred_collector - INFO - FRED data collection: 17/17 successful, 47 observations
+2025-05-27 18:33:06,247 - data_ingestion.scrapers.news_scraper - INFO - 🚀 Starting enhanced news scraping from 6 sources
+2025-05-27 18:33:06,248 - data_ingestion.scrapers.news_scraper - INFO - 📅 Looking for articles from the last 12 hours
+2025-05-27 18:33:06,248 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing marketwatch_topstories...
+2025-05-27 18:33:09,641 - data_ingestion.scrapers.news_scraper - WARNING - ⚠️  marketwatch_topstories: No articles collected in 3.39s - no_entries_in_feed
+2025-05-27 18:33:10,645 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing marketwatch_realtime...
+2025-05-27 18:33:12,746 - data_ingestion.scrapers.news_scraper - INFO - ✅ marketwatch_realtime: 9/9 articles (deduped) in 2.1s - requests_parse_10_entries
+2025-05-27 18:33:13,751 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing cnbc_finance...
+2025-05-27 18:33:14,432 - data_ingestion.scrapers.news_scraper - INFO - ✅ cnbc_finance: 13/13 articles (deduped) in 0.68s - direct_parse_30_entries
+2025-05-27 18:33:15,437 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing google_finance...
+2025-05-27 18:33:16,622 - data_ingestion.scrapers.news_scraper - INFO - ✅ google_finance: 15/15 articles (deduped) in 1.18s - direct_parse_102_entries
+2025-05-27 18:33:17,627 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing bloomberg_markets...
+2025-05-27 18:33:19,460 - data_ingestion.scrapers.news_scraper - INFO - ✅ bloomberg_markets: 15/15 articles (deduped) in 1.83s - direct_parse_30_entries
+2025-05-27 18:33:20,466 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing ft_companies...
+2025-05-27 18:33:21,598 - data_ingestion.scrapers.news_scraper - INFO - ✅ ft_companies: 6/6 articles (deduped) in 1.13s - direct_parse_25_entries
+2025-05-27 18:33:22,603 - data_ingestion.scrapers.news_scraper - INFO - 📊 SCRAPING SUMMARY
+2025-05-27 18:33:22,603 - data_ingestion.scrapers.news_scraper - INFO -    ✅ Successful sources: 5/6
+2025-05-27 18:33:22,603 - data_ingestion.scrapers.news_scraper - INFO -    📰 Total articles collected: 58
+2025-05-27 18:33:22,603 - data_ingestion.scrapers.news_scraper - INFO -    ⏰ Time window: 12 hours
+2025-05-27 18:33:22,604 - data_ingestion.scrapers.news_scraper - INFO -    📊 Articles by source:
+2025-05-27 18:33:22,604 - data_ingestion.scrapers.news_scraper - INFO -       • google_finance: 15
+2025-05-27 18:33:22,604 - data_ingestion.scrapers.news_scraper - INFO -       • bloomberg_markets: 15
+2025-05-27 18:33:22,604 - data_ingestion.scrapers.news_scraper - INFO -       • cnbc_finance: 13
+2025-05-27 18:33:22,604 - data_ingestion.scrapers.news_scraper - INFO -       • marketwatch_realtime: 9
+2025-05-27 18:33:22,604 - data_ingestion.scrapers.news_scraper - INFO -       • ft_companies: 6
+2025-05-27 18:33:22,606 - data_ingestion.scrapers.news_scraper - INFO -    🏷️  Top tags:
+2025-05-27 18:33:22,606 - data_ingestion.scrapers.news_scraper - INFO -       • international: 21
+2025-05-27 18:33:22,606 - data_ingestion.scrapers.news_scraper - INFO -       • tech_general: 20
+2025-05-27 18:33:22,606 - data_ingestion.scrapers.news_scraper - INFO -       • ai: 17
+2025-05-27 18:33:22,606 - data_ingestion.scrapers.news_scraper - INFO -       • europe: 16
+2025-05-27 18:33:22,606 - data_ingestion.scrapers.news_scraper - INFO -       • market: 15
+2025-05-27 18:33:22,607 - data_ingestion.scrapers.news_scraper - INFO -       • market_general: 15
+2025-05-27 18:33:22,607 - data_ingestion.scrapers.news_scraper - INFO -       • banking: 9
+2025-05-27 18:33:22,607 - data_ingestion.scrapers.news_scraper - INFO -       • energy: 9
+2025-05-27 18:33:22,607 - data_ingestion.scrapers.news_scraper - INFO -       • positive_sentiment: 7
+2025-05-27 18:33:22,607 - data_ingestion.scrapers.news_scraper - INFO -       • finance_general: 7
+2025-05-27 18:33:22,607 - data_ingestion.scrapers.news_scraper - INFO -    📈 Average quality score: 0.78
+2025-05-27 18:33:22,607 - data_ingestion.scrapers.news_scraper - INFO -    📝 Articles with good summaries: 35
+2025-05-27 18:33:22,607 - data_ingestion.scrapers.news_scraper - WARNING -    ❌ Failed sources: marketwatch_topstories
+2025-05-27 18:33:23,479 - data_ingestion.scrapers.earnings_scraper - INFO - Retrieved earnings calendar data for 8 out of 8 symbols
+2025-05-27 18:33:34,504 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for TSM
+2025-05-27 18:33:44,476 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for BABA
+2025-05-27 18:33:56,598 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for ASML
+2025-05-27 18:33:56,599 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for TSM
+2025-05-27 18:34:02,543 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 005930.KS
+2025-05-27 18:34:03,548 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for BABA
+2025-05-27 18:34:07,863 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for TCEHY
+2025-05-27 18:34:08,141 - data_ingestion.scrapers.sec_filing_scraper - WARNING - Could not find CIK for symbol TCEHY
+2025-05-27 18:34:09,144 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 6758.T
+2025-05-27 18:34:10,154 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for ASML
+2025-05-27 18:34:16,567 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 9984.T
+2025-05-27 18:34:17,572 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 0700.HK
+2025-05-27 18:34:21,322 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://kind.krx.co.kr/eng/disclosuredocument/005930: 404 Client Error: Not Found for url: https://kind.krx.co.kr/error404.jsp
+2025-05-27 18:34:22,856 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.release.tdnet.info/inbs/6758: 404 Client Error: Not Found for url: https://www.release.tdnet.info/inbs/6758
+2025-05-27 18:34:23,310 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.release.tdnet.info/inbs/9984: 404 Client Error: Not Found for url: https://www.release.tdnet.info/inbs/9984
+2025-05-27 18:34:24,748 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.hkexnews.hk/listedco/listconews/sehk/0700: 404 Client Error: Not Found for url: https://www.hkexnews.hk/listedco/listconews/sehk/0700
+2025-05-27 18:34:26,128 - knowledge_base.vector_store - INFO - Added 78 documents to vector store
+2025-05-27 18:34:26,135 - knowledge_base.knowledge_base_manager - INFO - Saved FAISS index
+2025-05-27 18:34:26,136 - root - INFO - Pipeline result: {'timestamp': '2025-05-27T18:32:50.704430', 'status': 'completed', 'documents_added': 78, 'errors': [], 'data_sources': {'economic_indicators': 47, 'market_data': 8, 'news_articles': 8, 'earnings_data': 11, 'regulatory_filings': 4}, 'chunks_created': 78, 'vector_store_size': 78}
+2025-05-27 18:38:30,312 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-05-27 18:38:30,313 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-05-27 18:38:35,684 - knowledge_base.knowledge_base_manager - INFO - Loaded existing FAISS index
+2025-05-27 18:38:35,685 - data_ingestion.api_collectors.fred_collector - INFO - Fetching FRED data with dynamic lookback...
+2025-05-27 18:38:47,217 - data_ingestion.api_collectors.fred_collector - INFO - FRED data collection: 17/17 successful, 47 observations
+2025-05-27 18:38:55,610 - data_ingestion.scrapers.news_scraper - INFO - 🚀 Starting enhanced news scraping from 6 sources
+2025-05-27 18:38:55,611 - data_ingestion.scrapers.news_scraper - INFO - 📅 Looking for articles from the last 12 hours
+2025-05-27 18:38:55,611 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing marketwatch_topstories...
+2025-05-27 18:38:58,535 - data_ingestion.scrapers.news_scraper - INFO - ✅ marketwatch_topstories: 10/10 articles (deduped) in 2.92s - requests_parse_10_entries
+2025-05-27 18:38:59,541 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing marketwatch_realtime...
+2025-05-27 18:39:01,462 - data_ingestion.scrapers.news_scraper - INFO - ✅ marketwatch_realtime: 9/9 articles (deduped) in 1.92s - requests_parse_10_entries
+2025-05-27 18:39:02,468 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing cnbc_finance...
+2025-05-27 18:39:03,019 - data_ingestion.scrapers.news_scraper - INFO - ✅ cnbc_finance: 14/14 articles (deduped) in 0.55s - direct_parse_30_entries
+2025-05-27 18:39:04,024 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing google_finance...
+2025-05-27 18:39:05,250 - data_ingestion.scrapers.news_scraper - INFO - ✅ google_finance: 15/15 articles (deduped) in 1.22s - direct_parse_102_entries
+2025-05-27 18:39:06,255 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing bloomberg_markets...
+2025-05-27 18:39:07,721 - data_ingestion.scrapers.news_scraper - INFO - ✅ bloomberg_markets: 15/15 articles (deduped) in 1.47s - direct_parse_30_entries
+2025-05-27 18:39:08,726 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing ft_companies...
+2025-05-27 18:39:09,551 - data_ingestion.scrapers.news_scraper - INFO - ✅ ft_companies: 5/5 articles (deduped) in 0.82s - direct_parse_25_entries
+2025-05-27 18:39:10,556 - data_ingestion.scrapers.news_scraper - INFO - 📊 SCRAPING SUMMARY
+2025-05-27 18:39:10,557 - data_ingestion.scrapers.news_scraper - INFO -    ✅ Successful sources: 6/6
+2025-05-27 18:39:10,557 - data_ingestion.scrapers.news_scraper - INFO -    📰 Total articles collected: 68
+2025-05-27 18:39:10,557 - data_ingestion.scrapers.news_scraper - INFO -    ⏰ Time window: 12 hours
+2025-05-27 18:39:10,557 - data_ingestion.scrapers.news_scraper - INFO -    📊 Articles by source:
+2025-05-27 18:39:10,557 - data_ingestion.scrapers.news_scraper - INFO -       • google_finance: 15
+2025-05-27 18:39:10,557 - data_ingestion.scrapers.news_scraper - INFO -       • bloomberg_markets: 15
+2025-05-27 18:39:10,557 - data_ingestion.scrapers.news_scraper - INFO -       • cnbc_finance: 14
+2025-05-27 18:39:10,558 - data_ingestion.scrapers.news_scraper - INFO -       • marketwatch_topstories: 10
+2025-05-27 18:39:10,558 - data_ingestion.scrapers.news_scraper - INFO -       • marketwatch_realtime: 9
+2025-05-27 18:39:10,558 - data_ingestion.scrapers.news_scraper - INFO -       • ft_companies: 5
+2025-05-27 18:39:10,558 - data_ingestion.scrapers.news_scraper - INFO -    🏷️  Top tags:
+2025-05-27 18:39:10,558 - data_ingestion.scrapers.news_scraper - INFO -       • tech_general: 25
+2025-05-27 18:39:10,558 - data_ingestion.scrapers.news_scraper - INFO -       • international: 22
+2025-05-27 18:39:10,559 - data_ingestion.scrapers.news_scraper - INFO -       • ai: 21
+2025-05-27 18:39:10,559 - data_ingestion.scrapers.news_scraper - INFO -       • market_general: 20
+2025-05-27 18:39:10,559 - data_ingestion.scrapers.news_scraper - INFO -       • market: 19
+2025-05-27 18:39:10,559 - data_ingestion.scrapers.news_scraper - INFO -       • europe: 15
+2025-05-27 18:39:10,559 - data_ingestion.scrapers.news_scraper - INFO -       • banking: 10
+2025-05-27 18:39:10,559 - data_ingestion.scrapers.news_scraper - INFO -       • positive_sentiment: 8
+2025-05-27 18:39:10,559 - data_ingestion.scrapers.news_scraper - INFO -       • finance_general: 8
+2025-05-27 18:39:10,559 - data_ingestion.scrapers.news_scraper - INFO -       • energy: 8
+2025-05-27 18:39:10,560 - data_ingestion.scrapers.news_scraper - INFO -    📈 Average quality score: 0.79
+2025-05-27 18:39:10,560 - data_ingestion.scrapers.news_scraper - INFO -    📝 Articles with good summaries: 44
+2025-05-27 18:39:11,768 - data_ingestion.scrapers.earnings_scraper - INFO - Retrieved earnings calendar data for 8 out of 8 symbols
+2025-05-27 18:39:24,362 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for TSM
+2025-05-27 18:39:36,351 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for BABA
+2025-05-27 18:39:47,712 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for ASML
+2025-05-27 18:39:47,713 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for TSM
+2025-05-27 18:39:50,226 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 005930.KS
+2025-05-27 18:39:51,227 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for BABA
+2025-05-27 18:39:53,138 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for TCEHY
+2025-05-27 18:39:53,517 - data_ingestion.scrapers.sec_filing_scraper - WARNING - Could not find CIK for symbol TCEHY
+2025-05-27 18:39:54,523 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 6758.T
+2025-05-27 18:39:55,528 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for ASML
+2025-05-27 18:39:57,367 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 9984.T
+2025-05-27 18:39:58,372 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 0700.HK
+2025-05-27 18:40:00,912 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://kind.krx.co.kr/eng/disclosuredocument/005930: 404 Client Error: Not Found for url: https://kind.krx.co.kr/error404.jsp
+2025-05-27 18:40:01,490 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.release.tdnet.info/inbs/6758: 404 Client Error: Not Found for url: https://www.release.tdnet.info/inbs/6758
+2025-05-27 18:40:01,938 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.release.tdnet.info/inbs/9984: 404 Client Error: Not Found for url: https://www.release.tdnet.info/inbs/9984
+2025-05-27 18:40:02,732 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.hkexnews.hk/listedco/listconews/sehk/0700: 404 Client Error: Not Found for url: https://www.hkexnews.hk/listedco/listconews/sehk/0700
+2025-05-27 18:40:04,110 - knowledge_base.vector_store - INFO - Added 79 documents to vector store
+2025-05-27 18:40:04,113 - knowledge_base.knowledge_base_manager - INFO - Saved FAISS index
+2025-05-27 18:40:04,114 - root - INFO - Pipeline result: {'timestamp': '2025-05-27T18:38:35.685427', 'status': 'completed', 'documents_added': 79, 'errors': [], 'data_sources': {'economic_indicators': 47, 'market_data': 8, 'news_articles': 9, 'earnings_data': 11, 'regulatory_filings': 4}, 'chunks_created': 79, 'vector_store_size': 157}
+2025-05-27 18:40:04,409 - root - INFO - Search results for 'TSMC earnings report': [{'content_type': 'earnings_analysis', 'symbol': 'TSM', 'title': 'TSM Fundamental Analysis - Investment Metrics', 'content': 'Earnings Analysis Article: TSM\nTitle: TSM Fundamental Analysis - Investment Metrics\nAuthor: Yahoo Finance Data\nSummary: Fundamental Analysis for TSM:\nForward P/E Ratio: 23.76\nPrice-to-Sales: 0.32\nProfit Margins: 41.7%\nStrong profit margins indicate efficient operations. \nSource URL: https://finance.yahoo.com/quote/TSM\n\nSentiment Analysis:\n- Sentiment Score: 1.00\n- Sentiment Label: positive', 'source': 'seeking_alpha_earnings', 'exchange': 'NYSE/NASDAQ', 'timestamp': '2025-05-27T18:39:24.362072', 'link': 'https://finance.yahoo.com/quote/TSM', 'author': 'Yahoo Finance Data', 'sentiment_score': 1.0, 'sentiment_label': 'positive', 'tags': ['earnings', 'fundamental_analysis', 'tsm', 'positive', 'third_party_analysis'], 'metadata': {'symbol': 'TSM', 'title': 'TSM Fundamental Analysis - Investment Metrics', 'summary': 'Fundamental Analysis for TSM:\nForward P/E Ratio: 23.76\nPrice-to-Sales: 0.32\nProfit Margins: 41.7%\nStrong profit margins indicate efficient operations. ', 'link': 'https://finance.yahoo.com/quote/TSM', 'author': 'Yahoo Finance Data', 'content_type': 'earnings_analysis', 'source': 'yahoo_finance_analysis', 'timestamp': '2025-05-27T18:39:24.362072', 'tags': ['earnings', 'fundamental_analysis', 'tsm'], 'sentiment_analysis': {'sentiment_score': 1.0, 'positive_indicators': 1, 'negative_indicators': 0, 'sentiment_label': 'positive'}}, 'similarity_score': 0.6292145252227783}, {'content_type': 'earnings_analysis', 'symbol': 'TSM', 'title': 'TSM Fundamental Analysis - Investment Metrics', 'content': 'Earnings Analysis Article: TSM\nTitle: TSM Fundamental Analysis - Investment Metrics\nAuthor: Yahoo Finance Data\nSummary: Fundamental Analysis for TSM:\nForward P/E Ratio: 23.76\nPrice-to-Sales: 0.32\nProfit Margins: 41.7%\nStrong profit margins indicate efficient operations. \nSource URL: https://finance.yahoo.com/quote/TSM\n\nSentiment Analysis:\n- Sentiment Score: 1.00\n- Sentiment Label: positive', 'source': 'seeking_alpha_earnings', 'exchange': 'NYSE/NASDAQ', 'timestamp': '2025-05-27T18:33:34.504069', 'link': 'https://finance.yahoo.com/quote/TSM', 'author': 'Yahoo Finance Data', 'sentiment_score': 1.0, 'sentiment_label': 'positive', 'tags': ['earnings', 'fundamental_analysis', 'tsm', 'positive', 'third_party_analysis'], 'metadata': {'symbol': 'TSM', 'title': 'TSM Fundamental Analysis - Investment Metrics', 'summary': 'Fundamental Analysis for TSM:\nForward P/E Ratio: 23.76\nPrice-to-Sales: 0.32\nProfit Margins: 41.7%\nStrong profit margins indicate efficient operations. ', 'link': 'https://finance.yahoo.com/quote/TSM', 'author': 'Yahoo Finance Data', 'content_type': 'earnings_analysis', 'source': 'yahoo_finance_analysis', 'timestamp': '2025-05-27T18:33:34.504069', 'tags': ['earnings', 'fundamental_analysis', 'tsm'], 'sentiment_analysis': {'sentiment_score': 1.0, 'positive_indicators': 1, 'negative_indicators': 0, 'sentiment_label': 'positive'}}, 'similarity_score': 0.6292145252227783}, {'content_type': 'earnings_calendar', 'symbol': 'TSM', 'title': 'TSM Earnings Calendar - [datetime.date(2025, 7, 16), datetime.date(2025, 7, 23)]', 'content': 'Upcoming Earnings: TSM\nEarnings Date: [datetime.date(2025, 7, 16), datetime.date(2025, 7, 23)]\nEPS Estimate: $0\nRevenue Estimate: $0', 'source': 'earnings_calendar', 'exchange': 'NYSE/NASDAQ', 'timestamp': '2025-05-27T18:39:10.702701', 'earnings_date': [datetime.date(2025, 7, 16), datetime.date(2025, 7, 23)], 'tags': ['earnings_calendar', 'tsm', 'earnings_calendar', 'forward_looking'], 'metadata': {'symbol': 'TSM', 'earnings_date': [datetime.date(2025, 7, 16), datetime.date(2025, 7, 23)], 'eps_estimate': 0, 'revenue_estimate': 0, 'content_type': 'earnings_calendar', 'source': 'yahoo_finance_calendar', 'timestamp': '2025-05-27T18:39:10.702701', 'tags': ['earnings_calendar', 'tsm']}, 'similarity_score': 0.6156681180000305}, {'content_type': 'earnings_calendar', 'symbol': 'TSM', 'title': 'TSM Earnings Calendar - [datetime.date(2025, 7, 16), datetime.date(2025, 7, 23)]', 'content': 'Upcoming Earnings: TSM\nEarnings Date: [datetime.date(2025, 7, 16), datetime.date(2025, 7, 23)]\nEPS Estimate: $0\nRevenue Estimate: $0', 'source': 'earnings_calendar', 'exchange': 'NYSE/NASDAQ', 'timestamp': '2025-05-27T18:33:22.733374', 'earnings_date': [datetime.date(2025, 7, 16), datetime.date(2025, 7, 23)], 'tags': ['earnings_calendar', 'tsm', 'earnings_calendar', 'forward_looking'], 'metadata': {'symbol': 'TSM', 'earnings_date': [datetime.date(2025, 7, 16), datetime.date(2025, 7, 23)], 'eps_estimate': 0, 'revenue_estimate': 0, 'content_type': 'earnings_calendar', 'source': 'yahoo_finance_calendar', 'timestamp': '2025-05-27T18:33:22.733374', 'tags': ['earnings_calendar', 'tsm']}, 'similarity_score': 0.6156681180000305}, {'content_type': 'market_data', 'symbol': 'TSM', 'company_name': 'Taiwan Semiconductor Manufacturing Company Limited', 'title': 'Taiwan Semiconductor Manufacturing Company Limited (TSM) Market Data', 'content': 'Current Market Data: Taiwan Semiconductor Manufacturing Company Limited (TSM)\nCurrent Price: $191.98\nPrevious Close: $196.19\nPrice Change: $-4.21 (-2.15%)\nMarket Cap: $995,708,108,800\nP/E Ratio: 23.102285\nVolume: 9,394,700\nSector: Technology\nExchange: NYSE/NASDAQ', 'source': 'yahoo_finance_market', 'exchange': 'NYSE/NASDAQ', 'timestamp': '2025-05-27T18:38:48.936075', 'current_price': 191.97999572753906, 'previous_close': 196.19000244140625, 'tags': ['market_data', 'asia_tech', 'tsm', 'technology'], 'metadata': {'symbol': 'TSM', 'company_name': 'Taiwan Semiconductor Manufacturing Company Limited', 'sector': 'Technology', 'current_price': 191.97999572753906, 'previous_close': 196.19000244140625, 'market_cap': 995708108800, 'pe_ratio': 23.102285, 'volume': 9394700, 'avg_volume': 17251741, 'timestamp': '2025-05-27T18:38:48.936075', 'source': 'yahoo_finance'}, 'similarity_score': 0.5942919254302979}]
+2025-05-27 19:08:39,835 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-05-27 19:08:39,835 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-05-27 19:08:45,081 - knowledge_base.knowledge_base_manager - INFO - Starting with empty FAISS index
+2025-05-27 19:08:45,558 - root - INFO - Health check: {'status': 'unhealthy', 'error': 'list index out of range', 'document_count': 0}
+2025-05-27 19:08:45,558 - root - INFO - Pipeline statistics: {'total_runs': 0, 'successful_runs': 0, 'failed_runs': 0, 'success_rate_percent': 0.0, 'total_documents_processed': 0, 'last_run_timestamp': None, 'data_source_statistics': {}}
+2025-05-27 19:08:45,558 - data_ingestion.api_collectors.fred_collector - INFO - Fetching FRED data with dynamic lookback...
+2025-05-27 19:08:56,792 - data_ingestion.api_collectors.fred_collector - INFO - FRED data collection: 17/17 successful, 47 observations
+2025-05-27 19:09:02,896 - data_ingestion.scrapers.news_scraper - INFO - 🚀 Starting enhanced news scraping from 6 sources
+2025-05-27 19:09:02,897 - data_ingestion.scrapers.news_scraper - INFO - 📅 Looking for articles from the last 12 hours
+2025-05-27 19:09:02,897 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing marketwatch_topstories...
+2025-05-27 19:09:05,633 - data_ingestion.scrapers.news_scraper - INFO - ✅ marketwatch_topstories: 10/10 articles (deduped) in 2.74s - requests_parse_10_entries
+2025-05-27 19:09:06,639 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing marketwatch_realtime...
+2025-05-27 19:09:08,789 - data_ingestion.scrapers.news_scraper - INFO - ✅ marketwatch_realtime: 9/9 articles (deduped) in 2.15s - requests_parse_10_entries
+2025-05-27 19:09:09,795 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing cnbc_finance...
+2025-05-27 19:09:10,968 - data_ingestion.scrapers.news_scraper - INFO - ✅ cnbc_finance: 13/13 articles (deduped) in 1.17s - direct_parse_30_entries
+2025-05-27 19:09:11,973 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing google_finance...
+2025-05-27 19:09:13,432 - data_ingestion.scrapers.news_scraper - INFO - ✅ google_finance: 15/15 articles (deduped) in 1.46s - direct_parse_102_entries
+2025-05-27 19:09:14,437 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing bloomberg_markets...
+2025-05-27 19:09:16,783 - data_ingestion.scrapers.news_scraper - INFO - ✅ bloomberg_markets: 15/15 articles (deduped) in 2.34s - direct_parse_30_entries
+2025-05-27 19:09:17,789 - data_ingestion.scrapers.news_scraper - INFO - 🔄 Processing ft_companies...
+2025-05-27 19:09:19,453 - data_ingestion.scrapers.news_scraper - INFO - ✅ ft_companies: 6/6 articles (deduped) in 1.66s - direct_parse_25_entries
+2025-05-27 19:09:20,458 - data_ingestion.scrapers.news_scraper - INFO - 📊 SCRAPING SUMMARY
+2025-05-27 19:09:20,459 - data_ingestion.scrapers.news_scraper - INFO -    ✅ Successful sources: 6/6
+2025-05-27 19:09:20,459 - data_ingestion.scrapers.news_scraper - INFO -    📰 Total articles collected: 68
+2025-05-27 19:09:20,459 - data_ingestion.scrapers.news_scraper - INFO -    ⏰ Time window: 12 hours
+2025-05-27 19:09:20,459 - data_ingestion.scrapers.news_scraper - INFO -    📊 Articles by source:
+2025-05-27 19:09:20,459 - data_ingestion.scrapers.news_scraper - INFO -       • google_finance: 15
+2025-05-27 19:09:20,459 - data_ingestion.scrapers.news_scraper - INFO -       • bloomberg_markets: 15
+2025-05-27 19:09:20,460 - data_ingestion.scrapers.news_scraper - INFO -       • cnbc_finance: 13
+2025-05-27 19:09:20,460 - data_ingestion.scrapers.news_scraper - INFO -       • marketwatch_topstories: 10
+2025-05-27 19:09:20,460 - data_ingestion.scrapers.news_scraper - INFO -       • marketwatch_realtime: 9
+2025-05-27 19:09:20,460 - data_ingestion.scrapers.news_scraper - INFO -       • ft_companies: 6
+2025-05-27 19:09:20,460 - data_ingestion.scrapers.news_scraper - INFO -    🏷️  Top tags:
+2025-05-27 19:09:20,460 - data_ingestion.scrapers.news_scraper - INFO -       • tech_general: 24
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • ai: 20
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • international: 20
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • market_general: 16
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • europe: 16
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • market: 15
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • finance_general: 10
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • banking: 10
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • energy: 10
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -       • economy: 7
+2025-05-27 19:09:20,461 - data_ingestion.scrapers.news_scraper - INFO -    📈 Average quality score: 0.79
+2025-05-27 19:09:20,462 - data_ingestion.scrapers.news_scraper - INFO -    📝 Articles with good summaries: 44
+2025-05-27 19:09:21,551 - data_ingestion.scrapers.earnings_scraper - INFO - Retrieved earnings calendar data for 8 out of 8 symbols
+2025-05-27 19:09:36,982 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for TSM
+2025-05-27 19:09:46,019 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for BABA
+2025-05-27 19:09:54,877 - data_ingestion.scrapers.earnings_scraper - INFO - Scraped 1 earnings articles for ASML
+2025-05-27 19:09:54,878 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for TSM
+2025-05-27 19:09:58,538 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 005930.KS
+2025-05-27 19:09:59,544 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for BABA
+2025-05-27 19:10:02,737 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for TCEHY
+2025-05-27 19:10:04,012 - data_ingestion.scrapers.sec_filing_scraper - WARNING - Could not find CIK for symbol TCEHY
+2025-05-27 19:10:05,017 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 6758.T
+2025-05-27 19:10:06,023 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for ASML
+2025-05-27 19:10:10,448 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 9984.T
+2025-05-27 19:10:11,455 - data_ingestion.scrapers.sec_filing_scraper - INFO - Collecting filings for 0700.HK
+2025-05-27 19:10:13,944 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://kind.krx.co.kr/eng/disclosuredocument/005930: 404 Client Error: Not Found for url: https://kind.krx.co.kr/error404.jsp
+2025-05-27 19:10:15,496 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.release.tdnet.info/inbs/6758: 404 Client Error: Not Found for url: https://www.release.tdnet.info/inbs/6758
+2025-05-27 19:10:15,917 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.release.tdnet.info/inbs/9984: 404 Client Error: Not Found for url: https://www.release.tdnet.info/inbs/9984
+2025-05-27 19:10:17,597 - data_ingestion.scrapers.sec_filing_scraper - ERROR - Error getting filing content from https://www.hkexnews.hk/listedco/listconews/sehk/0700: 404 Client Error: Not Found for url: https://www.hkexnews.hk/listedco/listconews/sehk/0700
+2025-05-27 19:10:18,605 - knowledge_base.vector_store - INFO - Added 69 documents to vector store
+2025-05-27 19:10:18,608 - knowledge_base.knowledge_base_manager - INFO - Saved FAISS index
+2025-05-27 19:10:18,608 - root - INFO - Pipeline result: {'timestamp': '2025-05-27T19:08:45.558473', 'status': 'completed', 'documents_added': 69, 'errors': [], 'data_sources': {'economic_indicators': 47, 'market_data': 8, 'news_articles': 7, 'earnings_data': 3, 'regulatory_filings': 4}, 'chunks_created': 69, 'vector_store_size': 69}
+2025-05-27 19:10:18,786 - root - INFO - Search results for 'Samsung regulatory filings': [{'content_type': 'regulatory_filing', 'symbol': '005930.KS', 'title': 'Samsung Electronics Co Ltd - annual_report', 'content': 'Regulatory Filing: Samsung Electronics Co Ltd\nSymbol: 005930.KS\nForm Type: annual_report\nFiling Date: 2025-02-26\nDescription: Annual Report for Samsung Electronics Co Ltd\nExchange: KSE\nDocument URL: https://kind.krx.co.kr/eng/disclosuredocument/005930', 'source': 'regulatory_kse', 'exchange': 'KSE', 'timestamp': '2025-05-27T19:09:58.539475', 'document_url': 'https://kind.krx.co.kr/eng/disclosuredocument/005930', 'filing_date': '2025-02-26', 'form_type': 'annual_report', 'tags': ['regulatory_filing', 'kse', '005930.ks'], 'metadata': {'company_code': '005930', 'company_name': 'Samsung Electronics Co Ltd', 'form_type': 'annual_report', 'filing_date': '2025-02-26', 'document_url': 'https://kind.krx.co.kr/eng/disclosuredocument/005930', 'description': 'Annual Report for Samsung Electronics Co Ltd', 'content_type': 'korean_filing', 'exchange': 'KSE', 'timestamp': '2025-05-27T19:09:58.539475', 'symbol': '005930.KS'}, 'similarity_score': 0.7576920986175537}, {'content_type': 'market_data', 'symbol': '005930.KS', 'company_name': 'Samsung Electronics Co., Ltd.', 'title': 'Samsung Electronics Co., Ltd. (005930.KS) Market Data', 'content': 'Current Market Data: Samsung Electronics Co., Ltd. (005930.KS)\nCurrent Price: $53900.00\nPrevious Close: $54700.00\nPrice Change: $-800.00 (-1.46%)\nMarket Cap: $355,089,441,095,680\nP/E Ratio: 0\nVolume: 13,439,520\nSector: Technology\nExchange: KSE', 'source': 'yahoo_finance_market', 'exchange': 'KSE', 'timestamp': '2025-05-27T19:08:58.546559', 'current_price': 53900.0, 'previous_close': 54700.0, 'tags': ['market_data', 'asia_tech', '005930.ks', 'technology'], 'metadata': {'symbol': '005930.KS', 'company_name': 'Samsung Electronics Co., Ltd.', 'sector': 'Technology', 'current_price': 53900.0, 'previous_close': 54700.0, 'market_cap': 355089441095680, 'pe_ratio': 0, 'volume': 13439520, 'avg_volume': 16569467, 'timestamp': '2025-05-27T19:08:58.546559', 'source': 'yahoo_finance'}, 'similarity_score': 0.623528242111206}, {'content_type': 'regulatory_filing', 'symbol': '6758.T', 'title': 'Sony Group Corporation - securities_report', 'content': 'Regulatory Filing: Sony Group Corporation\nSymbol: 6758.T\nForm Type: securities_report\nFiling Date: 2025-01-27\nDescription: Securities Report for Sony Group Corporation\nExchange: TSE\nDocument URL: https://www.release.tdnet.info/inbs/6758', 'source': 'regulatory_tse', 'exchange': 'TSE', 'timestamp': '2025-05-27T19:10:05.018311', 'document_url': 'https://www.release.tdnet.info/inbs/6758', 'filing_date': '2025-01-27', 'form_type': 'securities_report', 'tags': ['regulatory_filing', 'tse', '6758.t'], 'metadata': {'company_code': '6758', 'company_name': 'Sony Group Corporation', 'form_type': 'securities_report', 'filing_date': '2025-01-27', 'document_url': 'https://www.release.tdnet.info/inbs/6758', 'description': 'Securities Report for Sony Group Corporation', 'content_type': 'japanese_filing', 'exchange': 'TSE', 'timestamp': '2025-05-27T19:10:05.018311', 'symbol': '6758.T'}, 'similarity_score': 0.4548221826553345}, {'content_type': 'regulatory_filing', 'symbol': '9984.T', 'title': 'SoftBank Group Corp - securities_report', 'content': 'Regulatory Filing: SoftBank Group Corp\nSymbol: 9984.T\nForm Type: securities_report\nFiling Date: 2025-01-27\nDescription: Securities Report for SoftBank Group Corp\nExchange: TSE\nDocument URL: https://www.release.tdnet.info/inbs/9984', 'source': 'regulatory_tse', 'exchange': 'TSE', 'timestamp': '2025-05-27T19:10:10.449995', 'document_url': 'https://www.release.tdnet.info/inbs/9984', 'filing_date': '2025-01-27', 'form_type': 'securities_report', 'tags': ['regulatory_filing', 'tse', '9984.t'], 'metadata': {'company_code': '9984', 'company_name': 'SoftBank Group Corp', 'form_type': 'securities_report', 'filing_date': '2025-01-27', 'document_url': 'https://www.release.tdnet.info/inbs/9984', 'description': 'Securities Report for SoftBank Group Corp', 'content_type': 'japanese_filing', 'exchange': 'TSE', 'timestamp': '2025-05-27T19:10:10.449995', 'symbol': '9984.T'}, 'similarity_score': 0.413308322429657}, {'content_type': 'regulatory_filing', 'symbol': '0700.HK', 'title': 'Tencent Holdings Limited - annual_report', 'content': 'Regulatory Filing: Tencent Holdings Limited\nSymbol: 0700.HK\nForm Type: annual_report\nFiling Date: 2025-02-16\nDescription: Annual Report for Tencent Holdings Limited\nExchange: SEHK\nDocument URL: https://www.hkexnews.hk/listedco/listconews/sehk/0700', 'source': 'regulatory_sehk', 'exchange': 'SEHK', 'timestamp': '2025-05-27T19:10:11.455756', 'document_url': 'https://www.hkexnews.hk/listedco/listconews/sehk/0700', 'filing_date': '2025-02-16', 'form_type': 'annual_report', 'tags': ['regulatory_filing', 'sehk', '0700.hk'], 'metadata': {'company_code': '0700', 'company_name': 'Tencent Holdings Limited', 'form_type': 'annual_report', 'filing_date': '2025-02-16', 'document_url': 'https://www.hkexnews.hk/listedco/listconews/sehk/0700', 'description': 'Annual Report for Tencent Holdings Limited', 'content_type': 'hk_filing', 'exchange': 'SEHK', 'timestamp': '2025-05-27T19:10:11.455756', 'symbol': '0700.HK'}, 'similarity_score': 0.41052281856536865}]
