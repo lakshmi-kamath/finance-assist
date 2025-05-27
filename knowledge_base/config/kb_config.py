@@ -8,6 +8,9 @@ def get_knowledge_base_config() -> Dict:
     return {
         'alphavantage_api_key': os.getenv('ALPHAVANTAGE_API_KEY', 'demo'),
         'fred_api_key': os.getenv('FRED_API_KEY', 'demo'),
+        'quandl_api_key': os.getenv('QUANDL_API_KEY', 'demo'),
+        'polygon_api_key': os.getenv('POLYGON_API_KEY', 'demo'),
+        'finnhub_api_key': os.getenv('FINNHUB_API_KEY', 'demo'),
         
         'vector_store': {
             'embedding_model': 'sentence-transformers/all-MiniLM-L6-v2',
