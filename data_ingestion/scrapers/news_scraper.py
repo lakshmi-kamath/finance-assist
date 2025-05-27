@@ -18,7 +18,6 @@ class NewsSourceScraper:
             'marketwatch_topstories': 'https://feeds.marketwatch.com/marketwatch/topstories/',
             'marketwatch_realtime': 'https://feeds.marketwatch.com/marketwatch/realtimeheadlines/',
             'cnbc_finance': 'https://www.cnbc.com/id/100003114/device/rss/rss.html',
-            'cnbc_tech': 'https://www.cnbc.com/id/19854910/device/rss/rss.html',
             'google_finance': 'https://news.google.com/rss/search?q=finance&hl=en-US&gl=US&ceid=US:en',
             
             # Alternative sources (test periodically and uncomment if working)
