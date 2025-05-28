@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 import time
 import random
 
-from base_agent import BaseAgent, Task, AgentResult, TaskPriority
+from agents.base_agent import BaseAgent, Task, AgentResult, TaskPriority
 from data_ingestion.scrapers.earnings_scraper import EarningsTranscriptScraper
 from data_ingestion.scrapers.sec_filing_scraper import SECFilingScraper
 from data_ingestion.scrapers.news_scraper import NewsSourceScraper

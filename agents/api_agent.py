@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 import dotenv
 dotenv.load_dotenv()
 
-from base_agent import BaseAgent, Task, AgentResult, TaskPriority
+from agents.base_agent import BaseAgent, Task, AgentResult, TaskPriority
 from data_ingestion.api_collectors.alpha_vantage_collector import AlphaVantageCollector
 from data_ingestion.api_collectors.fred_collector import FREDCollector
 from data_ingestion.api_collectors.yahoo_finance_collector import YahooFinanceCollector

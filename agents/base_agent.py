@@ -4,7 +4,8 @@ import logging
 from datetime import datetime
 from dataclasses import dataclass, field
 from enum import Enum
-
+import dotenv
+dotenv.load_dotenv()
 
 class AgentStatus(Enum):
     """Agent execution status"""

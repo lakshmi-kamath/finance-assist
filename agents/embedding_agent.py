@@ -26,7 +26,7 @@ import hashlib
 import pickle
 from pathlib import Path
 
-from base_agent import BaseAgent, Task, AgentResult, TaskPriority
+from agents.base_agent import BaseAgent, Task, AgentResult, TaskPriority
 
 # For text processing and embeddings
 import tiktoken
