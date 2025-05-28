@@ -13,7 +13,7 @@ import json
 from dataclasses import dataclass, asdict
 from collections import defaultdict
 
-from base_agent import BaseAgent, Task, AgentResult, TaskPriority
+from agents.base_agent import BaseAgent, Task, AgentResult, TaskPriority
 
 # Initialize logging
 os.makedirs('logs', exist_ok=True)

@@ -256,12 +256,13 @@ class FREDCollector:
     def test_api_connection(self) -> Dict:
         """Test FRED API connection and return status"""
         if not self.api_key or self.api_key == 'demo':
+            # Switch to demo mode
+            self.logger.info("No API key provided, using demo data")
             return {
                 'status': 'demo_mode',
-                'message': 'No API key provided, using demo data',
+                'message': 'Using demo data - economic indicators will be simulated',
                 'api_key_valid': False
             }
-        
         try:
             # Test with a simple, reliable series
             test_url = f"{self.base_url}/series/observations"
