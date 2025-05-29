@@ -20,23 +20,8 @@ from agents.api_agent import create_api_agent
 from agents.scraping_agent import create_scraping_agent
 from agents.retriever_agent import RetrieverAgent
 from orchestrator_nodes import OrchestratorNodes
-
-
-class OrchestratorState(TypedDict):
-    """State for the orchestrator graph"""
-    user_query: str
-    symbols: List[str]
-    query_context: Dict[str, Any]
-    task_type: str
-    task_parameters: Dict[str, Any]
-    api_results: List[Dict[str, Any]]
-    scraping_results: List[Dict[str, Any]]
-    retrieval_results: List[Dict[str, Any]]
-    retrieved_context: Dict[str, Any]
-    final_results: Dict[str, Any]
-    error: Optional[str]
-    execution_plan: List[str]
-
+from orchestrator.state import OrchestratorState
+from agents.language_agent import MorningBriefAgent, MarketData
 
 class OrchestratorAgent(BaseAgent):
     """Orchestrator agent that coordinates API, scraping, and retrieval agents using LangGraph"""
@@ -54,15 +39,27 @@ class OrchestratorAgent(BaseAgent):
             'vector_db_path': '/Users/lakshmikamath/Desktop/finance-assist/knowledge_base/vector_store/faiss.index',  # Add this
             'chunk_index_path': '/Users/lakshmikamath/Desktop/finance-assist/knowledge_base/vector_store/metadata.pkl',  # Add this
             'confidence_threshold': 0.7,
-            'max_search_results': 50
+            'max_search_results': 10
         })
         self.retriever_agent = RetrieverAgent(config=retriever_config)
-            
+        
+        gemini_api_key = config.get('gemini_api_key') if config else None
+        if not gemini_api_key:
+            gemini_api_key = os.getenv('GEMINI_API_KEY')
+        
+        if gemini_api_key:
+            self.language_agent = MorningBriefAgent(gemini_api_key)
+        else:
+            self.logger.warning("No Gemini API key found. Language agent will not be available.")
+            self.language_agent = None
+
         # Initialize enhanced nodes container
+# Initialize enhanced nodes container
         self.nodes = OrchestratorNodes(
             api_agent=self.api_agent,
             scraping_agent=self.scraping_agent,
             retriever_agent=self.retriever_agent,
+            language_agent=self.language_agent,  # ADD THIS
             logger=self.logger
         )
         
@@ -86,26 +83,27 @@ class OrchestratorAgent(BaseAgent):
         return ['api_agent', 'scraping_agent', 'retriever_agent']
     
     def _build_workflow(self) -> StateGraph:
-        """Build enhanced LangGraph workflow for orchestration with retrieval"""
+        """Build enhanced LangGraph workflow for orchestration with retrieval and language generation"""
         workflow = StateGraph(OrchestratorState)
         
-        # Add nodes using the enhanced nodes class
+        # Add nodes
         workflow.add_node("analyze_query", self.nodes.analyze_query_node)
-        workflow.add_node("retrieve_context", self.nodes.retrieve_context_node)  # Remove asyncio.create_task wrapper
+        workflow.add_node("retrieve_context", self.nodes.retrieve_context_node)
         workflow.add_node("execute_api_tasks", self.nodes.execute_api_tasks_node)
         workflow.add_node("execute_scraping_tasks", self.nodes.execute_scraping_tasks_node)
         workflow.add_node("enhance_with_retrieval", self.nodes.enhance_with_retrieval_node)
+        workflow.add_node("generate_language_brief", self.nodes.generate_language_brief_node)  # NEW NODE
         workflow.add_node("combine_results", self.nodes.combine_results_node)
         
-        # Set up workflow edges (enhanced sequential processing with retrieval)
+        # Set up workflow edges
         workflow.add_edge("analyze_query", "retrieve_context")
         workflow.add_edge("retrieve_context", "execute_api_tasks")
         workflow.add_edge("execute_api_tasks", "execute_scraping_tasks") 
         workflow.add_edge("execute_scraping_tasks", "enhance_with_retrieval")
-        workflow.add_edge("enhance_with_retrieval", "combine_results")
+        workflow.add_edge("enhance_with_retrieval", "generate_language_brief")  # NEW EDGE
+        workflow.add_edge("generate_language_brief", "combine_results")  # MODIFIED EDGE
         workflow.add_edge("combine_results", END)
         
-        # Set entry point
         workflow.set_entry_point("analyze_query")
         
         return workflow.compile()
@@ -232,7 +230,10 @@ class OrchestratorAgent(BaseAgent):
             'scraping_tasks_executed': len(state.get('scraping_results', [])),
             'retrieval_tasks_executed': len(state.get('retrieval_results', [])),
             'context_retrieved': bool(state.get('retrieved_context', {})),
-            'retrieval_confidence': state.get('retrieved_context', {}).get('confidence_score', 0.0)
+            'retrieval_confidence': state.get('retrieved_context', {}).get('confidence_score', 0.0),
+            'language_brief_generated': bool(state.get('language_brief', {})),  # ADD THIS
+            'brief_data_points': state.get('language_brief', {}).get('data_points_used', 0),  # ADD THIS
+            'brief_portfolio_focused': state.get('language_brief', {}).get('portfolio_focused', False)  # ADD THIS
         }
     
     # Enhanced methods with retrieval integration
@@ -352,6 +353,19 @@ class OrchestratorAgent(BaseAgent):
         else:
             sub_agent_health['retriever_agent'] = {'healthy': False, 'error': 'not_initialized'}
         
+            # Language agent check
+        if self.language_agent:
+            try:
+                # Language agent doesn't have a health_check method, so just check if it exists
+                sub_agent_health['language_agent'] = {
+                    'healthy': True,
+                    'model': 'gemini-1.5-flash'
+                }
+            except Exception as e:
+                sub_agent_health['language_agent'] = {'healthy': False, 'error': str(e)}
+        else:
+            sub_agent_health['language_agent'] = {'healthy': False, 'error': 'not_initialized'}
+
         base_health['sub_agents'] = sub_agent_health
         base_health['healthy'] = base_health['healthy'] and all(
             agent.get('healthy', False) for agent in sub_agent_health.values()
@@ -414,44 +428,45 @@ class OrchestratorAgent(BaseAgent):
         )
         
         return base_health
-    def get_structured_output(self, result: AgentResult) -> Dict[str, Any]:
-        """Get structured output suitable for passing to next agent"""
-        if not result.success:
-            return {'error': result.error}
+    # def get_structured_output(self, result: AgentResult) -> Dict[str, Any]:
+    #     """Get structured output suitable for passing to next agent"""
+    #     if not result.success:
+    #         return {'error': result.error}
         
-        data = result.data
-        return {
-            'task_type': data.get('task_type'),
-            'symbols_analyzed': data.get('symbols_analyzed', []),
-            'timestamp': data.get('timestamp'),
-            'api_data': data.get('api_data', {}),
-            'scraping_data': data.get('scraping_data', {}),
-            'retrieval_data': data.get('retrieval_data', {}),
-            'retrieved_context': data.get('retrieved_context', {}),
-            'insights': data.get('insights', {}),
-            'summary': data.get('summary', {}),
-            'metadata': result.metadata
-        }
+    #     data = result.data
+    #     return {
+    #         'task_type': data.get('task_type'),
+    #         'symbols_analyzed': data.get('symbols_analyzed', []),
+    #         'timestamp': data.get('timestamp'),
+    #         'api_data': data.get('api_data', {}),
+    #         'scraping_data': data.get('scraping_data', {}),
+    #         'retrieval_data': data.get('retrieval_data', {}),
+    #         'retrieved_context': data.get('retrieved_context', {}),
+    #         'insights': data.get('insights', {}),
+    #         'summary': data.get('summary', {}),
+    #         'metadata': result.metadata
+    #     }
 
 
 # Utility function to create configured orchestrator agent
 def create_orchestrator_agent(config: Dict[str, Any] = None) -> OrchestratorAgent:
     """Factory function to create configured orchestrator agent"""
     default_config = {
-    'alphavantage_api_key': os.getenv('ALPHAVANTAGE_API_KEY'),
-    'fred_api_key': os.getenv('FRED_API_KEY'),
-    'rate_limit_delay': 2,
-    'max_concurrent_requests': 3,
-    'timeout_seconds': 300,
-    # Retrieval-specific config - Update these
-    'embedding_model': 'all-MiniLM-L6-v2',
-    'vector_db_path': '/Users/lakshmikamath/Desktop/finance-assist/knowledge_base/vector_store/faiss.index', 
-    'chunk_index_path': '/Users/lakshmikamath/Desktop/finance-assist/knowledge_base/vector_store/metadata.pkl',
-    'default_freshness_weight': 0.3,
-    'default_relevance_weight': 0.4,  
-    'default_similarity_weight': 0.3,
-    'confidence_threshold': 0.7,
-    'max_search_results': 50
+        'alphavantage_api_key': os.getenv('ALPHAVANTAGE_API_KEY'),
+        'fred_api_key': os.getenv('FRED_API_KEY'),
+        'gemini_api_key': os.getenv('GEMINI_API_KEY'),  # ADD THIS
+        'rate_limit_delay': 2,
+        'max_concurrent_requests': 3,
+        'timeout_seconds': 300,
+        # Retrieval-specific config - Update these
+        'embedding_model': 'all-MiniLM-L6-v2',
+        'vector_db_path': '/Users/lakshmikamath/Desktop/finance-assist/knowledge_base/vector_store/faiss.index', 
+        'chunk_index_path': '/Users/lakshmikamath/Desktop/finance-assist/knowledge_base/vector_store/metadata.pkl',
+        'default_freshness_weight': 0.3,
+        'default_relevance_weight': 0.4,  
+        'default_similarity_weight': 0.3,
+        'confidence_threshold': 0.7,
+        'max_search_results': 10
 }
     
     if config:
@@ -507,6 +522,9 @@ if __name__ == "__main__":
                 print(f"  API tasks: {result.metadata.get('api_tasks_executed', 0)}")
                 print(f"  Scraping tasks: {result.metadata.get('scraping_tasks_executed', 0)}")
                 print(f"  Retrieval tasks: {result.metadata.get('retrieval_tasks_executed', 0)}")
+                print(f"  Language brief generated: {result.metadata.get('language_brief_generated', False)}")  # NEW
+                print(f"  Brief data points used: {result.metadata.get('brief_data_points', 0)}")  # NEW
+                print(f"  Brief portfolio focused: {result.metadata.get('brief_portfolio_focused', False)}")  # NEW
                 print(f"  Symbols processed: {result.metadata.get('symbols_processed', 0)}")
                 retrieval_confidence = result.metadata.get('retrieval_confidence', 0.0)
                 if isinstance(retrieval_confidence, (int, float)):
@@ -516,6 +534,28 @@ if __name__ == "__main__":
                 
                 # Show detailed results
                 final_results = result.data
+                
+                # NEW SECTION: Show Language Brief first (most important output)
+                print(f"\n--- LANGUAGE-GENERATED BRIEF ---")
+                language_brief = final_results.get('language_brief', {})
+                if language_brief:
+                    brief_text = language_brief.get('brief', '')
+                    if brief_text:
+                        print(f"Generated Brief:")
+                        print("-" * 60)
+                        print(brief_text)
+                        print("-" * 60)
+                    
+                    # Show brief metadata
+                    print(f"Brief Metadata:")
+                    print(f"  Generated at: {language_brief.get('generated_at', 'N/A')}")
+                    print(f"  Data points used: {language_brief.get('data_points_used', 0)}")
+                    print(f"  Portfolio focused: {language_brief.get('portfolio_focused', False)}")
+                    
+                    if 'error' in language_brief:
+                        print(f"  Error: {language_brief['error']}")
+                else:
+                    print("  No language brief generated")
                 
                 print(f"\n--- RETRIEVED CONTEXT ---")
                 retrieved_context = final_results.get('retrieved_context', {})
@@ -623,6 +663,7 @@ if __name__ == "__main__":
                 print(f"  - scraping_data: {list(scraping_data.keys())}")
                 print(f"  - retrieval_data: {list(retrieval_data.keys()) if retrieval_data else []}")
                 print(f"  - retrieved_context: {list(retrieved_context.keys()) if retrieved_context else []}")
+                print(f"  - language_brief: {list(language_brief.keys()) if language_brief else []}")  # NEW
                 print(f"  - insights: {list(insights.keys()) if insights else []}")
                 print(f"  - summary: {list(summary.keys()) if summary else []}")
                 

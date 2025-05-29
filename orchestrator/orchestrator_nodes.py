@@ -1,33 +1,29 @@
-"""
-Simplified node definitions for the orchestrator agent workflow.
-Single class with all necessary functionality for coordinating API, scraping, and retrieval agents.
-"""
 
+"""
+Fixed orchestrator_nodes.py - Language Brief Generation Fix
+Key fixes:
+1. Handle both dict and OrchestratorState types in generate_language_brief_node
+2. Fix attribute access/assignment to work with both types
+3. Add better error handling and debugging
+4. Ensure market data extraction works correctly
+"""
 
 from typing import Dict, List, Any, Optional
 import logging
 import re
 from datetime import datetime
-
 from agents.base_agent import AgentResult, Task
-
+from state import OrchestratorState
+from agents.language_agent import MarketData
 
 class OrchestratorNodes:
     """Unified orchestrator workflow nodes with API, scraping, and retrieval capabilities"""
     
-    def __init__(self, api_agent, scraping_agent, retriever_agent, logger: logging.Logger):
-        """
-        Initialize orchestrator nodes with all required dependencies
-        
-        Args:
-            api_agent: The API agent instance
-            scraping_agent: The scraping agent instance
-            retriever_agent: The retriever agent instance
-            logger: Logger instance for error handling
-        """
+    def __init__(self, api_agent, scraping_agent, retriever_agent, language_agent, logger):
         self.api_agent = api_agent
         self.scraping_agent = scraping_agent
         self.retriever_agent = retriever_agent
+        self.language_agent = language_agent
         self.logger = logger
         
         # Query patterns for intelligent routing
@@ -40,7 +36,25 @@ class OrchestratorNodes:
             'sec_filings': [r'sec\s+filing', r'10-k', r'10-q', r'8-k', r'annual\s+report'],
             'comprehensive_analysis': [r'comprehensive', r'complete\s+analysis', r'full\s+analysis']
         }
-    
+
+    def _get_state_value(self, state, key: str, default=None):
+        """Safely get value from state (works with both dict and OrchestratorState)"""
+        if hasattr(state, key):
+            return getattr(state, key, default)
+        elif isinstance(state, dict):
+            return state.get(key, default)
+        else:
+            return default
+
+    def _set_state_value(self, state, key: str, value):
+        """Safely set value in state (works with both dict and OrchestratorState)"""
+        if hasattr(state, key):
+            setattr(state, key, value)
+        elif isinstance(state, dict):
+            state[key] = value
+        else:
+            self.logger.warning(f"Cannot set {key} on state type {type(state)}")
+
     async def analyze_query_node(self, state: Dict[str, Any]) -> Dict[str, Any]:
         """Analyze user query and determine execution strategy"""
         query = state['user_query'].lower()
@@ -64,7 +78,6 @@ class OrchestratorNodes:
             'execution_plan': execution_plan
         }
     
-    
     async def execute_api_tasks_node(self, state: Dict[str, Any]) -> Dict[str, Any]:
         """Execute all API-related data collection tasks"""
         symbols = state['symbols']
@@ -80,8 +93,10 @@ class OrchestratorNodes:
                 if result.success:
                     api_results.append({
                         'task': 'stock_quotes',
+                        'task_type': 'get_stock_quotes',
                         'data': result.data,
-                        'metadata': result.metadata
+                        'metadata': result.metadata,
+                        'success': True
                     })
                 
                 # Get detailed stock information
@@ -89,8 +104,10 @@ class OrchestratorNodes:
                 if result.success:
                     api_results.append({
                         'task': 'stock_info',
+                        'task_type': 'get_company_overview',
                         'data': result.data,
-                        'metadata': result.metadata
+                        'metadata': result.metadata,
+                        'success': True
                     })
             
             # Economic indicators for market context
@@ -99,8 +116,10 @@ class OrchestratorNodes:
             if result.success:
                 api_results.append({
                     'task': 'economic_indicators',
+                    'task_type': 'get_economic_indicators',
                     'data': result.data,
-                    'metadata': result.metadata
+                    'metadata': result.metadata,
+                    'success': True
                 })
             
             # Market overview
@@ -108,8 +127,10 @@ class OrchestratorNodes:
             if result.success:
                 api_results.append({
                     'task': 'market_overview',
+                    'task_type': 'get_market_overview',
                     'data': result.data,
-                    'metadata': result.metadata
+                    'metadata': result.metadata,
+                    'success': True
                 })
             
         except Exception as e:
@@ -140,8 +161,10 @@ class OrchestratorNodes:
                 if result.success:
                     scraping_results.append({
                         'task': 'earnings_analysis',
+                        'task_type': 'batch_earnings_scrape',
                         'data': result.data,
-                        'metadata': result.metadata
+                        'metadata': result.metadata,
+                        'success': True
                     })
                 
                 # SEC filings for fundamental analysis
@@ -153,8 +176,10 @@ class OrchestratorNodes:
                 if result.success:
                     scraping_results.append({
                         'task': 'sec_filings',
+                        'task_type': 'scrape_sec_filings',
                         'data': result.data,
-                        'metadata': result.metadata
+                        'metadata': result.metadata,
+                        'success': True
                     })
             
             # Financial news and sentiment analysis
@@ -166,8 +191,10 @@ class OrchestratorNodes:
             if result.success:
                 scraping_results.append({
                     'task': 'news_sentiment',
+                    'task_type': 'scrape_financial_news',
                     'data': result.data,
-                    'metadata': result.metadata
+                    'metadata': result.metadata,
+                    'success': True
                 })
             
             # Comprehensive company analysis for detailed requests
@@ -178,8 +205,10 @@ class OrchestratorNodes:
                 if result.success:
                     scraping_results.append({
                         'task': 'comprehensive_analysis',
+                        'task_type': 'comprehensive_company_analysis',
                         'data': result.data,
-                        'metadata': result.metadata
+                        'metadata': result.metadata,
+                        'success': True
                     })
             
         except Exception as e:
@@ -193,12 +222,17 @@ class OrchestratorNodes:
     async def enhance_with_retrieval_node(self, state: Dict[str, Any]) -> Dict[str, Any]:
         """Enhance results with additional retrieval-based analysis"""
         try:
+            # Initialize retrieval_results if not present
+            if 'retrieval_results' not in state:
+                state['retrieval_results'] = []
+                
             # Use specific retrieval based on symbols and analysis type
             symbols = state.get('symbols', [])
             if symbols:
                 # Portfolio-specific retrieval
                 portfolio_task = Task(
-                    type='portfolio_analysis_retrieval',  # Use proper task type
+                    id=f"portfolio_analysis_{datetime.now().isoformat()}",
+                    type='portfolio_analysis_retrieval',
                     parameters={
                         'query': f"analysis insights for {' '.join(symbols)}",
                         'context': {
@@ -216,21 +250,28 @@ class OrchestratorNodes:
                 if portfolio_result.success:
                     state['retrieval_results'].append({
                         'task': 'portfolio_enhancement',
+                        'task_type': 'portfolio_analysis_retrieval',
                         'data': portfolio_result.data,
-                        'metadata': portfolio_result.metadata
+                        'metadata': portfolio_result.metadata,
+                        'success': True
                     })
             
         except Exception as e:
             self.logger.error(f"Error in enhance_with_retrieval_node: {e}")
         
         return state
+
     async def retrieve_context_node(self, state: Dict[str, Any]) -> Dict[str, Any]:
         """Retrieve relevant context using RetrieverAgent"""
         try:
-            # Create proper retrieval task based on integration guide
+            # Initialize retrieval_results if not present
+            if 'retrieval_results' not in state:
+                state['retrieval_results'] = []
+                
+            # Create proper retrieval task
             retrieval_task = Task(
                 id=f"portfolio_retrieval_{datetime.now().isoformat()}",
-                type='contextual_retrieval',  # Use proper task type
+                type='contextual_retrieval',
                 parameters={
                     'query': state['user_query'],
                     'context': {
@@ -248,8 +289,10 @@ class OrchestratorNodes:
                 state['retrieved_context'] = result.data
                 state['retrieval_results'].append({
                     'task': 'context_retrieval',
+                    'task_type': 'contextual_retrieval',
                     'data': result.data,
-                    'metadata': result.metadata
+                    'metadata': result.metadata,
+                    'success': True
                 })
             else:
                 self.logger.warning(f"Context retrieval failed: {result.error}")
@@ -260,48 +303,14 @@ class OrchestratorNodes:
             state['retrieved_context'] = {}
         
         return state
-    def _determine_context_type(self, query: str, query_context: Dict[str, Any]) -> str:
-        """Determine the best context type for retrieval based on query and context"""
-        query_lower = query.lower()
-        analysis_type = query_context.get('analysis_type', '').lower()
-        
-        # Check for specific analysis types
-        if 'earnings' in query_lower or 'earnings' in analysis_type:
-            return 'earnings'
-        elif 'portfolio' in query_lower or 'portfolio' in analysis_type:
-            return 'portfolio'
-        elif any(risk_term in query_lower for risk_term in ['risk', 'volatility', 'correlation', 'beta']):
-            return 'risk'
-        elif any(news_term in query_lower for news_term in ['news', 'sentiment', 'media', 'social']):
-            return 'news'
-        else:
-            return 'general'
 
-    def _build_retrieval_query(self, user_query: str, symbols: List[str], context: Dict[str, Any]) -> str:
-        """Build optimized retrieval query"""
-        # Start with user query
-        query_parts = [user_query]
-        
-        # Add symbols if available
-        if symbols:
-            query_parts.append(f"for {' '.join(symbols)}")
-        
-        # Add context-specific terms
-        analysis_type = context.get('analysis_type', '')
-        if analysis_type:
-            query_parts.append(f"{analysis_type} analysis")
-        
-        # Add time preference
-        if context.get('include_historical'):
-            query_parts.append("with historical data")
-        
-        return ' '.join(query_parts)
     async def combine_results_node(self, state: Dict[str, Any]) -> Dict[str, Any]:
         """Combine and synthesize all collected data into final results"""
         api_results = state['api_results']
         scraping_results = state['scraping_results']
         retrieval_results = state.get('retrieval_results', [])
         retrieved_context = state.get('retrieved_context', {})
+        language_brief = state.get('language_brief', {})  # ADD THIS LINE
         task_type = state['task_type']
         symbols = state['symbols']
         
@@ -313,6 +322,7 @@ class OrchestratorNodes:
             'scraping_data': {},
             'retrieval_data': {},
             'retrieved_context': retrieved_context,
+            'language_brief': language_brief,  # ADD THIS LINE
             'insights': {},
             'summary': {}
         }
@@ -351,6 +361,196 @@ class OrchestratorNodes:
             'final_results': final_results
         }
     
+    async def generate_language_brief_node(self, state) -> Dict[str, Any]:
+        """Generate language brief using all collected data - FIXED VERSION"""
+        
+        if not self.language_agent:
+            self.logger.warning("Language agent not available, skipping brief generation")
+            return state
+        
+        try:
+            self.logger.info(f"Generating language brief - State type: {type(state)}")
+            
+            # Convert all results to MarketData format
+            market_data = []
+            
+            # Process API results - USE SAFE GETTER
+            api_results = self._get_state_value(state, 'api_results', [])
+            self.logger.info(f"Found {len(api_results)} API results")
+            
+            for api_result in api_results:
+                if api_result.get('success') and api_result.get('data'):
+                    content = self._format_api_data_for_brief(
+                        api_result['data'], 
+                        api_result.get('task_type', 'unknown')
+                    )
+                    market_data.append(MarketData(
+                        content=content,
+                        data_type='api_data',
+                        timestamp=datetime.now(),
+                        importance=0.8
+                    ))
+                    self.logger.info(f"Added API data: {content[:100]}...")
+            
+            # Process scraping results - USE SAFE GETTER
+            scraping_results = self._get_state_value(state, 'scraping_results', [])
+            self.logger.info(f"Found {len(scraping_results)} scraping results")
+            
+            for scraping_result in scraping_results:
+                if scraping_result.get('success') and scraping_result.get('data'):
+                    content = self._format_scraping_data_for_brief(
+                        scraping_result['data'], 
+                        scraping_result.get('task_type', 'unknown')
+                    )
+                    market_data.append(MarketData(
+                        content=content,
+                        data_type='news',
+                        timestamp=datetime.now(),
+                        importance=0.7
+                    ))
+                    self.logger.info(f"Added scraping data: {content[:100]}...")
+            
+            # Process retrieval results - USE SAFE GETTER
+            retrieval_results = self._get_state_value(state, 'retrieval_results', [])
+            self.logger.info(f"Found {len(retrieval_results)} retrieval results")
+            
+            for retrieval_result in retrieval_results:
+                if retrieval_result.get('success') and retrieval_result.get('data'):
+                    content = self._format_retrieval_data_for_brief(retrieval_result['data'])
+                    market_data.append(MarketData(
+                        content=content,
+                        data_type='historical',
+                        timestamp=datetime.now(),
+                        importance=0.6
+                    ))
+                    self.logger.info(f"Added retrieval data: {content[:100]}...")
+            
+            # Extract portfolio symbols if available - USE SAFE GETTER
+            user_portfolio = self._get_state_value(state, 'symbols', [])
+            
+            self.logger.info(f"About to generate brief with {len(market_data)} market data points")
+            
+            # Generate the brief
+            brief_result = await self.language_agent.generate_morning_brief(
+                market_data=market_data,
+                user_portfolio=user_portfolio if user_portfolio else None
+            )
+            
+            # Add brief to state - USE SAFE SETTER
+            self._set_state_value(state, 'language_brief', brief_result)
+            
+            self.logger.info(f"Generated language brief with {brief_result.get('data_points_used', 0)} data points used by language model")
+            
+        except Exception as e:
+            self.logger.error(f"Error generating language brief: {e}", exc_info=True)
+            fallback_brief = {
+                'brief': f"Unable to generate brief due to error: {str(e)}",
+                'error': str(e),
+                'generated_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'data_points_used': 0,
+                'portfolio_focused': False
+            }
+            self._set_state_value(state, 'language_brief', fallback_brief)
+        
+        return state
+
+    def _format_api_data_for_brief(self, api_data: Dict[str, Any], task_type: str) -> str:
+        """Format API data for language brief with more specific formatting"""
+        
+        if task_type == 'get_stock_quotes':
+            # Handle stock quote data
+            if isinstance(api_data, dict):
+                formatted_quotes = []
+                for symbol, quote_data in api_data.items():
+                    if isinstance(quote_data, dict):
+                        price = quote_data.get('05. price', quote_data.get('price', 'N/A'))
+                        change = quote_data.get('09. change', quote_data.get('change', 'N/A'))
+                        formatted_quotes.append(f"{symbol}: ${price} (Change: {change})")
+                return "Stock Quotes: " + "; ".join(formatted_quotes)
+        
+        elif task_type == 'get_company_overview':
+            # Handle company overview data
+            if isinstance(api_data, dict):
+                name = api_data.get('Name', 'Unknown Company')
+                sector = api_data.get('Sector', 'N/A')
+                market_cap = api_data.get('MarketCapitalization', 'N/A')
+                return f"Company Overview: {name} (Sector: {sector}, Market Cap: {market_cap})"
+        
+        elif task_type == 'get_economic_indicators':
+            # Handle FRED economic data
+            if isinstance(api_data, dict):
+                indicators = []
+                for key, value in api_data.items():
+                    if isinstance(value, (int, float, str)):
+                        indicators.append(f"{key}: {value}")
+                return "Economic Indicators: " + "; ".join(indicators[:3])  # Limit to 3
+        
+        elif task_type == 'get_market_overview':
+            # Handle market overview data
+            if isinstance(api_data, dict):
+                overview_items = []
+                for key, value in api_data.items():
+                    if isinstance(value, (int, float, str)):
+                        overview_items.append(f"{key}: {value}")
+                return "Market Overview: " + "; ".join(overview_items[:3])
+        
+        # Default fallback
+        return f"API Data ({task_type}): {str(api_data)[:200]}..."
+
+    def _format_scraping_data_for_brief(self, scraping_data: Dict[str, Any], task_type: str) -> str:
+        """Format scraping data for language brief"""
+        
+        if task_type == 'scrape_sec_filings':
+            # Handle SEC filings
+            if isinstance(scraping_data, dict) and 'filings' in scraping_data:
+                filings = scraping_data['filings'][:2]  # Recent 2 filings
+                filing_info = []
+                for filing in filings:
+                    if isinstance(filing, dict):
+                        form_type = filing.get('form_type', 'Unknown')
+                        date = filing.get('date', 'N/A')
+                        filing_info.append(f"{form_type} filed {date}")
+                return "SEC Filings: " + "; ".join(filing_info)
+        
+        elif task_type == 'scrape_financial_news':
+            # Handle financial news scraping
+            if isinstance(scraping_data, dict):
+                if 'headlines' in scraping_data:
+                    headlines = scraping_data['headlines'][:3]  # Top 3 headlines
+                    return "Market Headlines: " + "; ".join(headlines)
+                elif 'articles' in scraping_data:
+                    articles = scraping_data['articles'][:2]
+                    summaries = []
+                    for article in articles:
+                        if isinstance(article, dict):
+                            title = article.get('title', article.get('headline', 'Article'))
+                            summaries.append(title)
+                    return "News Articles: " + "; ".join(summaries)
+        
+        # Default fallback
+        return f"Scraped Data ({task_type}): {str(scraping_data)[:200]}..."
+
+    def _format_retrieval_data_for_brief(self, retrieval_data: Dict[str, Any]) -> str:
+        """Format retrieval data for language brief"""
+        
+        if isinstance(retrieval_data, dict):
+            chunks = retrieval_data.get('chunks', [])
+            if chunks:
+                # Get the top chunk with highest score
+                top_chunk = chunks[0] if chunks else {}
+                content = top_chunk.get('content', '')
+                source = top_chunk.get('source', 'Historical Data')
+                
+                # Truncate content for brief
+                truncated_content = content[:150] + "..." if len(content) > 150 else content
+                return f"Historical Context from {source}: {truncated_content}"
+            else:
+                confidence = retrieval_data.get('confidence_score', 0.0)
+                return f"Retrieved historical context with {confidence:.2f} confidence"
+        
+        return f"Historical Data: {str(retrieval_data)[:150]}..."
+
+    # Include all other helper methods from the original class...
     def _extract_symbols_from_query(self, query: str) -> List[str]:
         """Extract stock symbols from query text"""
         # Skip for general market queries
@@ -445,25 +645,6 @@ class OrchestratorNodes:
         
         return plan
     
-    def _build_retrieval_query(self, query: str, symbols: List[str], context: Dict[str, Any]) -> str:
-        """Build optimized query for retrieval agent"""
-        search_terms = [query]
-        
-        if symbols:
-            search_terms.extend(symbols)
-        
-        # Add context-specific terms
-        if context.get('analysis_type'):
-            search_terms.append(context['analysis_type'])
-        
-        if context.get('include_historical'):
-            search_terms.append('historical performance trends')
-        
-        if context.get('include_peer_analysis'):
-            search_terms.append('peer comparison industry analysis')
-        
-        return ' '.join(search_terms)
-    
     def _generate_insights(self, api_results: List[Dict], scraping_results: List[Dict], 
                           retrieval_results: List[Dict], retrieved_context: Dict[str, Any], 
                           task_type: str) -> Dict[str, Any]:
@@ -543,3 +724,26 @@ class OrchestratorNodes:
         summary['data_sources_used'] = list(set(summary['data_sources_used']))
         
         return summary
+    
+    # DEBUGGING HELPER - Add this to your orchestrator_nodes.py for debugging
+    def debug_state_contents(self, state: OrchestratorState, step_name: str):
+        """Debug helper to see what's in the state"""
+        self.logger.info(f"=== DEBUG {step_name} ===")
+        self.logger.info(f"API Results: {len(getattr(state, 'api_results', []) or [])}")
+        self.logger.info(f"Scraping Results: {len(getattr(state, 'scraping_results', []) or [])}")
+        self.logger.info(f"Retrieval Results: {len(getattr(state, 'retrieval_results', []) or [])}")
+        self.logger.info(f"Symbols: {getattr(state, 'symbols', [])}")
+        
+        # Debug API results content
+        api_results = getattr(state, 'api_results', []) or []
+        for i, result in enumerate(api_results):
+            self.logger.info(f"API Result {i}: success={result.get('success')}, task_type={result.get('task_type')}, data_keys={list(result.get('data', {}).keys()) if isinstance(result.get('data'), dict) else type(result.get('data'))}")
+        
+        # Debug scraping results content  
+        scraping_results = getattr(state, 'scraping_results', []) or []
+        for i, result in enumerate(scraping_results):
+            self.logger.info(f"Scraping Result {i}: success={result.get('success')}, task_type={result.get('task_type')}, data_keys={list(result.get('data', {}).keys()) if isinstance(result.get('data'), dict) else type(result.get('data'))}")
+
+
+    # ADD THIS CALL AT THE START OF YOUR generate_language_brief_node:
+    # self.debug_state_contents(state, "LANGUAGE_BRIEF_START")
