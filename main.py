@@ -23,14 +23,9 @@ async def main():
     # Run pipeline
     result = await kb_manager.run_pipeline()
     logging.info(f"Pipeline result: {result}")
-    
-    # Perform a new search
-    query = "Samsung regulatory filings"
-    results = await kb_manager.search(query, k=5)
-    logging.info(f"Search results for '{query}': {results}")
+
 
 if __name__ == "__main__":
     asyncio.run(main())
     
     # Option 2: Schedule regular updates (uncomment to use)
-    # kb_manager.schedule_updates()
