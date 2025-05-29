@@ -49,3 +49,4 @@ google-cloud-speech
 google-cloud-texttospeech
 openai
 pydantic
+psutil

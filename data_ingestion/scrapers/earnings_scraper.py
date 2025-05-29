@@ -152,7 +152,10 @@ class EarningsTranscriptScraper:
             'Sec-Fetch-Site': 'none',
             'Cache-Control': 'max-age=0'
         }
-        
+        ticker_mappings = {
+            '005930.KS': 'SSNLF',  # Map Korean ticker to US OTC ticker
+        }
+        symbol = ticker_mappings.get(symbol, symbol)
         # Try multiple URL patterns
         urls_to_try = [
             f"https://seekingalpha.com/symbol/{symbol}/earnings",

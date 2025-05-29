@@ -1,0 +1,14 @@
+2025-05-29 16:09:42,046 - __main__ - INFO - Finance Assistant System Startup
+2025-05-29 16:09:42,047 - __main__ - INFO - === Starting Finance Assistant System ===
+2025-05-29 16:09:42,047 - __main__ - INFO - All dependencies found
+2025-05-29 16:09:42,048 - __main__ - ERROR - Startup error: (pid=51229)
+2025-05-29 16:09:42,048 - __main__ - INFO - Stopping all services...
+2025-05-29 16:09:42,048 - __main__ - INFO - All services stopped
+2025-05-29 16:09:42,049 - __main__ - INFO - Finance Assistant System shutdown completed
+2025-05-29 16:10:38,086 - __main__ - INFO - Finance Assistant System Startup
+2025-05-29 16:10:38,086 - __main__ - INFO - === Starting Finance Assistant System ===
+2025-05-29 16:10:38,087 - __main__ - INFO - All dependencies found
+2025-05-29 16:10:38,087 - __main__ - ERROR - Startup error: (pid=51229)
+2025-05-29 16:10:38,087 - __main__ - INFO - Stopping all services...
+2025-05-29 16:10:38,087 - __main__ - INFO - All services stopped
+2025-05-29 16:10:38,087 - __main__ - INFO - Finance Assistant System shutdown completed

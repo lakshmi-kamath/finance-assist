@@ -1,5 +1,5 @@
 from typing import Dict, List, Any, Optional, TypedDict
-import logging
+from pydantic import BaseModel, Field
 
 class OrchestratorState(TypedDict):
     """State for the orchestrator graph"""
