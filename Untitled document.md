@@ -1,6 +1,7 @@
   
 **Architecture Diagram:**  
-![][image1]
+
+<img width="682" alt="Screenshot 2025-05-30 at 10 33 17 PM" src="https://github.com/user-attachments/assets/a3facc41-bb03-476b-8844-1859187e7f9a" />
 
 # **Financial Data Collectors \- Comprehensive Analysis**
 
